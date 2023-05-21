@@ -1,0 +1,32 @@
+@use '../abstracts/mixins' as mixin;
+@use '../abstracts/variables' as var;
+
+body {
+  color: var.$copy-clr;
+  line-height: var.$copy-leading;
+  font: var.$copy-font;
+}
+
+a {
+  transition: var.$link-trans;
+  transition-property: var.$link-trans-prop;
+  color: var.$link-clr;
+  text-decoration: var.$link-decoration;
+
+  @include mixin.hover-focus {
+    color: var.$link-clr-active;
+    text-decoration: var.$link-decoration-active;
+  }
+}
+
+.title {
+  color: var.$title-clr;
+  font-weight: var.$title-pri-fw;
+  font-family: var.$title-pri-ff;
+}
+
+.title-secondary {
+  color: var.$title-sec-clr;
+  font-weight: var.$title-sec-fw;
+  font-family: var.$title-sec-ff;
+}

@@ -1,0 +1,142 @@
+@use 'functions' as func;
+@use 'variables' as var;
+
+// Create breakpoint mixins for media queries
+$breakpoints-up: (
+  'sm': var.$brk-sm,
+  'md': var.$brk-md,
+  'lg': var.$brk-lg,
+  'xl': var.$brk-xl,
+);
+
+$breakpoints-down: (
+  'sm': var.$brk-dwn-sm,
+  'md': var.$brk-dwn-md,
+  'lg': var.$brk-dwn-lg,
+  'xl': var.$brk-dwn-xl,
+);
+
+@mixin breakpoint($breakpointSize) {
+  @media (min-width: map-get($breakpoints-up, $breakpointSize)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($breakpointSize) {
+  @media (max-width: map-get($breakpoints-down, $breakpointSize)) {
+    @content;
+  }
+}
+
+// Create mixins for hover, focus and focus-within states
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+
+@mixin focus {
+  &:focus {
+    @content;
+  }
+}
+
+@mixin focus-within {
+  &:focus-within {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin hover-focus-within {
+  &:hover,
+  &:focus-within {
+    @content;
+  }
+}
+
+// Create mixins for flexbox
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-colum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// Create mixins for grid
+@mixin grid(
+  $grid-col-count,
+  $grid-col-row-count: null,
+  $grid-row-gap: null,
+  $grid-col-gap: null
+) {
+  display: grid;
+  grid-template-columns: repeat($grid-col-count, minmax(0, 1fr));
+  grid-template-rows: repeat($grid-col-row-count, minmax(0, 1fr));
+  column-gap: $grid-col-gap;
+  row-gap: $grid-row-gap;
+}
+
+// Create mixin for @font-face
+@mixin font-face($font-family, $font-path, $font-weight, $font-style: normal) {
+  @font-face {
+    font-family: #{$font-family};
+    font-display: swap;
+    font-weight: #{$font-weight};
+    src: url(#{$font-path});
+  }
+}
+
+// Create mixin for buttons
+@mixin button(
+  $padding: var.$btn-padding,
+  $transition: var.$btn-trans,
+  $transition-property: var.$btn-trans-prop,
+  $radius: var.$btn-radius,
+  $font: var.$btn-font
+) {
+  padding: $padding;
+  transition: $transition;
+  transition-property: $transition-property;
+  border-radius: $radius;
+  font: $font;
+}
+
+// Create Mixin for button styling
+@mixin button-styling(
+  $padding: null,
+  $border: null,
+  $border-active: null,
+  $bg: null,
+  $bg-active: null,
+  $colour: null,
+  $colour-active: null,
+  $outline: null
+) {
+  padding: $padding;
+  border: $border;
+  background-color: $bg;
+  color: $colour;
+  cursor: pointer;
+
+  @include hover-focus-within {
+    border: $border-active;
+    background-color: $bg-active;
+    color: $colour-active;
+  }
+
+  @include focus-within {
+    outline: $outline;
+  }
+}

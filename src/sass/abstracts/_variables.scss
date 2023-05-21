@@ -1,0 +1,125 @@
+@use 'functions' as func;
+
+// ---------- BREAKPOINTS
+$brk-sm: func.getEm(768);
+$brk-md: func.getEm(1024);
+$brk-lg: func.getEm(1280);
+$brk-xl: func.getEm(1440);
+
+$brk-dwn-sm: func.getEm(767.98);
+$brk-dwn-md: func.getEm(1023.98);
+$brk-dwn-lg: func.getEm(1279.98);
+$brk-dwn-xl: func.getEm(1439.98);
+
+// ---------- COLOURS
+
+// Remove any colours that are not in use
+$clr-ntr-100: null;
+$clr-ntr-200: null;
+$clr-ntr-300: null;
+$clr-ntr-400: null;
+$clr-ntr-500: null;
+$clr-ntr-600: null;
+$clr-ntr-700: null;
+$clr-ntr-800: null;
+$clr-ntr-900: null;
+
+$clr-pri-100: null;
+$clr-pri-200: null;
+$clr-pri-300: null;
+$clr-pri-400: null;
+$clr-pri-500: null;
+$clr-pri-600: null;
+$clr-pri-700: null;
+$clr-pri-800: null;
+$clr-pri-900: null;
+
+// ---------- TYPOGRAPHY
+
+// ----- Leading
+// Remove any leading levels that are not in use. This is to be sure that we
+// keep the variables tidy
+$leading-100: null;
+$leading-200: null;
+$leading-300: null;
+$leading-400: null;
+$leading-500: null;
+$leading-600: null;
+$leading-700: null;
+$leading-800: null;
+$leading-900: null;
+
+// ----- Font Weight
+// Remove any font weights that are not in use
+$fw-thin: 100;
+$fw-extralight: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+$fw-black: 900;
+
+// ----- Font Size
+// Remove any font size level that are not in use. This is to keep the
+// variables file neat.
+$fs-100: null;
+$fs-200: null;
+$fs-300: null;
+$fs-400: null;
+$fs-500: null;
+$fs-600: null;
+$fs-700: null;
+$fs-800: null;
+$fs-900: null;
+
+// ----- Font Family
+// Remove any font families that are not in use. You will need to keep
+// $ff-pri or else you will run into errors.
+$ff-pri: null;
+$ff-sec: null;
+
+// ----- Copy
+$copy-clr: null;
+$copy-leading: null;
+$copy-fw: null;
+$copy-fs: null;
+$copy-ff: $ff-pri;
+
+$copy-font: $copy-fw $copy-fs $copy-ff;
+
+// ----- Title
+$title-clr: null;
+$title-pri-fw: $fw-bold;
+$title-pri-ff: $ff-pri;
+
+$title-sec-clr: null;
+$title-sec-fw: null;
+$title-sec-ff: null;
+
+// ---------- LINKS
+$link-trans: 150ms ease-in-out;
+$link-trans-prop: all;
+$link-clr: null;
+$link-clr-active: null;
+$link-decoration: none;
+$link-decoration-active: none;
+
+// ---------- COMPONENTS
+
+// ----- Buttons
+$btn-padding: null;
+$btn-trans: $link-trans;
+$btn-trans-prop: null;
+$btn-radius: null;
+$btn-font: null;
+
+// ---------- LAYOUT
+
+// ----- Wrapper
+$wrapper-max-width: null;
+$wrapper-max-width-sm: null;
+$wrapper-max-width-md: null;
+$wrapper-max-width-lg: null;
+$wrapper-max-width-xl: null;

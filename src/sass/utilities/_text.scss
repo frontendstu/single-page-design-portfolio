@@ -1,0 +1,29 @@
+// Text Alignment
+$text-align: (
+  'left': left,
+  'centre': center,
+  'right': right,
+  'justify': justify,
+  'start': start,
+  'end': end,
+);
+
+@each $align-name, $align-val in $text-align {
+  .text-#{$align-name} {
+    text-align: #{$align-val};
+  }
+}
+
+// Text Transform
+$text-transform: (
+  'uppercase': uppercase,
+  'lowercase': lowercase,
+  'capitalise': capitalize,
+  'normal': none,
+);
+
+@each $transform-name, $transform-val in $text-transform {
+  .text-#{$transform-name} {
+    text-transform: #{$transform-val};
+  }
+}

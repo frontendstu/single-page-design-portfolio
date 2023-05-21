@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mixin;
+
+.wrapper {
+  max-width: var.$wrapper-max-width;
+  margin-inline: auto;
+
+  @include mixin.breakpoint(sm) {
+    max-width: var.$wrapper-max-width-sm;
+  }
+
+  @include mixin.breakpoint(md) {
+    max-width: var.$wrapper-max-width-md;
+  }
+
+  @include mixin.breakpoint(lg) {
+    max-width: var.$wrapper-max-width-lg;
+  }
+
+  @include mixin.breakpoint(xl) {
+    max-width: var.$wrapper-max-width-xl;
+  }
+}

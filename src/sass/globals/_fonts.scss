@@ -1,0 +1,9 @@
+@use '../abstracts/mixins' as mixin;
+
+// This is an example of how you use the font-face mixin:
+//
+// @include mixin.font-face(
+//   $font-family: 'Manrope',
+//   $font-path: '../../assets/fonts/manrope/Manrope-VariableFont_wght.ttf',
+//   $font-weight: 400 600
+// );
