@@ -88,8 +88,8 @@ $btn-font: $fw-bold $fs-100 $ff-pri;
 // ---------- LAYOUT
 
 // ----- Wrapper
-$wrapper-max-width: null;
-$wrapper-max-width-sm: null;
+$wrapper-max-width: func.getRem(343);
+$wrapper-max-width-sm: func.getRem(690);
 $wrapper-max-width-md: null;
-$wrapper-max-width-lg: null;
+$wrapper-max-width-lg: func.getRem(1110);
 $wrapper-max-width-xl: null;
