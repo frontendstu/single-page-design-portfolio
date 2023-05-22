@@ -46,9 +46,7 @@ $fs-500: func.getRem(40);
 $fs-600: func.getRem(56);
 
 // ----- Font Family
-// Remove any font families that are not in use. You will need to keep
-// $ff-pri or else you will run into errors.
-$ff-pri: null;
+$ff-pri: 'Plus Jakarta Sans', sans-serif;
 $ff-sec: null;
 
 // ----- Copy
