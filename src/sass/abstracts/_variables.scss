@@ -31,23 +31,19 @@ $leading-200: 28px;
 $leading-300: 32px;
 $leading-400: 40px;
 $leading-500: 56px;
+$leading-700: 70px;
 
 // ----- Font Weight
 $fw-medium: 500;
 $fw-bold: 700;
 
 // ----- Font Size
-// Remove any font size level that are not in use. This is to keep the
-// variables file neat.
-$fs-100: null;
-$fs-200: null;
-$fs-300: null;
-$fs-400: null;
-$fs-500: null;
-$fs-600: null;
-$fs-700: null;
-$fs-800: null;
-$fs-900: null;
+$fs-100: func.getRem(16);
+$fs-200: func.getRem(18);
+$fs-300: func.getRem(24);
+$fs-400: func.getRem(32);
+$fs-500: func.getRem(40);
+$fs-600: func.getRem(56);
 
 // ----- Font Family
 // Remove any font families that are not in use. You will need to keep
