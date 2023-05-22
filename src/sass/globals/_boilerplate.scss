@@ -5,6 +5,10 @@ body {
   color: var.$copy-clr;
   line-height: var.$copy-leading;
   font: var.$copy-font;
+
+  @include mixin.breakpoint(sm) {
+    line-height: var.$copy-leading-sm;
+  }
 }
 
 a {
