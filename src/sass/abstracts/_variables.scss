@@ -79,11 +79,11 @@ $link-decoration-active: none;
 // ---------- COMPONENTS
 
 // ----- Buttons
-$btn-padding: null;
+$btn-padding: func.getRem(14) func.getRem(45);
 $btn-trans: $link-trans;
 $btn-trans-prop: null;
-$btn-radius: null;
-$btn-font: null;
+$btn-radius: 33vw;
+$btn-font: $fw-bold $fs-100 $ff-pri;
 
 // ---------- LAYOUT
 
