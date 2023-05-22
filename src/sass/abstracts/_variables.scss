@@ -26,17 +26,11 @@ $clr-royl: hsl(314, 45%, 23%);
 // ---------- TYPOGRAPHY
 
 // ----- Leading
-// Remove any leading levels that are not in use. This is to be sure that we
-// keep the variables tidy
-$leading-100: null;
-$leading-200: null;
-$leading-300: null;
-$leading-400: null;
-$leading-500: null;
-$leading-600: null;
-$leading-700: null;
-$leading-800: null;
-$leading-900: null;
+$leading-100: 26px;
+$leading-200: 28px;
+$leading-300: 32px;
+$leading-400: 40px;
+$leading-500: 56px;
 
 // ----- Font Weight
 // Remove any font weights that are not in use
