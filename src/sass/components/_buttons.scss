@@ -14,3 +14,13 @@
     $colour-active: var.$btn-pri-clr-active
   );
 }
+
+// Button: Secondary
+.btn[data-btn-style='secondary'] {
+  @include mixin.button-styling(
+    $bg: var.$btn-sec-bg,
+    $bg-active: var.$btn-sec-bg-active,
+    $colour: var.$btn-sec-clr,
+    $colour-active: var.$btn-sec-clr-active
+  );
+}
