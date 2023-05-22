@@ -50,10 +50,11 @@ $ff-pri: 'Plus Jakarta Sans', sans-serif;
 $ff-sec: null;
 
 // ----- Copy
-$copy-clr: null;
-$copy-leading: null;
-$copy-fw: null;
-$copy-fs: null;
+$copy-clr: $clr-ntr-200;
+$copy-leading: $leading-100;
+$copy-leading-sm: $leading-200;
+$copy-fw: $fw-medium;
+$copy-fs: $fs-100;
 $copy-ff: $ff-pri;
 
 $copy-font: $copy-fw $copy-fs $copy-ff;
