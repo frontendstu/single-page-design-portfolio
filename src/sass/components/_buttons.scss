@@ -4,3 +4,13 @@
 .btn {
   @include mixin.button();
 }
+
+// Button: Primary
+.btn[data-btn-style='primary'] {
+  @include mixin.button-styling(
+    $bg: var.$btn-pri-bg,
+    $bg-active: var.$btn-pri-bg-active,
+    $colour: var.$btn-pri-clr,
+    $colour-active: var.$btn-pri-clr-active
+  );
+}
