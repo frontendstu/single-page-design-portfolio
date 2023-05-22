@@ -12,17 +12,9 @@ $brk-dwn-lg: func.getEm(1279.98);
 $brk-dwn-xl: func.getEm(1439.98);
 
 // ---------- COLOURS
-
-// Remove any colours that are not in use
-$clr-ntr-100: null;
-$clr-ntr-200: null;
-$clr-ntr-300: null;
-$clr-ntr-400: null;
-$clr-ntr-500: null;
-$clr-ntr-600: null;
-$clr-ntr-700: null;
-$clr-ntr-800: null;
-$clr-ntr-900: null;
+$clr-ntr-100: hsl(0, 100%, 100%);
+$clr-ntr-200: hsl(30, 5%, 45%);
+$clr-ntr-900: hsl(0, 0%, 1%);
 
 $clr-pri-100: null;
 $clr-pri-200: null;
