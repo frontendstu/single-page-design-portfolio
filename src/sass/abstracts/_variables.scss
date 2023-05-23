@@ -112,6 +112,11 @@ $hero-title-fs: func.getRem(36);
 $hero-title-fs-sm: func.getRem(44);
 $hero-title-fs-xl: $fs-600;
 
+// --- Hero: Copy
+$hero-copy-max-width: func.getRem(285);
+$hero-copy-max-width-sm: func.getRem(573);
+$hero-copy-max-width-xl: func.getRem(730);
+
 // ---------- LAYOUT
 
 // ----- Wrapper
