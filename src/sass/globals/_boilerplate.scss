@@ -9,6 +9,7 @@ body {
 
   @include mixin.breakpoint(sm) {
     line-height: var.$copy-leading-sm;
+    font-size: var.$copy-fs-sm;
   }
 }
 
