@@ -3,6 +3,10 @@
 
 .btn {
   @include mixin.button();
+  @include mixin.breakpoint(sm) {
+    padding: var.$btn-padding-sm;
+    font-size: var.$btn-fs-sm;
+  }
 }
 
 // Button: Primary
