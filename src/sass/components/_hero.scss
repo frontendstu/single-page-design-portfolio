@@ -9,6 +9,7 @@
   }
 
   @include mixin.breakpoint(xl) {
+    max-width: var.$hero-max-width-xl;
     margin-top: var.$hero-marg-top-xl;
   }
 
