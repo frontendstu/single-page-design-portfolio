@@ -80,11 +80,12 @@ $link-decoration-active: none;
 // ---------- COMPONENTS
 
 // ----- Buttons
-$btn-padding: func.getRem(14) func.getRem(45);
+$btn-padding: func.getRem(16) func.getRem(28);
+$btn-padding-sm: func.getRem(14) func.getRem(45);
 $btn-trans: $link-trans;
 $btn-trans-prop: null;
 $btn-radius: 33vw;
-$btn-font: $fw-bold $fs-100 func.getRem(14);
+$btn-font: $fw-bold func.getRem(14) $copy-ff;
 $btn-fs-sm: $fs-100;
 
 // --- Button: Primary
