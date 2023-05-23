@@ -1,2 +1,30 @@
 @use '../abstracts/mixins' as mixin;
 @use '../abstracts/variables' as var;
+
+$clrs: (
+  // 'neutral-100': $clr-ntr-100,
+  'neutral-200': var.$clr-ntr-200,
+  'neutral-400': var.$clr-ntr-400,
+  'neutral-900': var.$clr-ntr-900,
+
+  'purple': var.$clr-purp,
+  'orange': var.$clr-orge,
+  'pink': var.$clr-pink,
+  'red': var.$clr-red,
+  'teal': var.$clr-teal,
+  'royal': var.$clr-royl
+);
+
+// Text Colour
+@each $clr-name, $clr-val in $clrs {
+  .colour-#{$clr-name} {
+    color: #{$clr-val};
+  }
+}
+
+// Background Colour
+@each $clr-name, $clr-val in $clrs {
+  .bg-#{$clr-name} {
+    background-color: #{$clr-val};
+  }
+}
