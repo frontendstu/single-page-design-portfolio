@@ -1,2 +1,11 @@
 @use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mixin;
+
+.header {
+  @include mixin.flex;
+  margin-top: var.$header-marg-top;
+
+  @include mixin.breakpoint(sm) {
+    margin-top: var.$header-marg-top-sm;
+  }
+}
