@@ -21,6 +21,7 @@
     }
 
     @include mixin.breakpoint(xl) {
+      line-height: var.$hero-title-leading-xl;
       font-size: var.$hero-title-fs-xl;
     }
   }
