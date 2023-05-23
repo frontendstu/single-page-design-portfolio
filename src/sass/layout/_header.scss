@@ -5,6 +5,20 @@
   @include mixin.flex;
   margin-top: var.$header-marg-top;
 
+  &__branding {
+    margin-right: auto;
+
+    img {
+      width: var.$header-brand-img-width;
+      height: var.$header-brand-img-height;
+
+      @include mixin.breakpoint(sm) {
+        width: var.$header-brand-img-width-sm;
+        height: var.$header-brand-img-height-sm;
+      }
+    }
+  }
+
   @include mixin.breakpoint(sm) {
     margin-top: var.$header-marg-top-sm;
   }
