@@ -102,6 +102,11 @@ $btn-sec-bg-active: $clr-orge;
 $btn-sec-clr: $clr-ntr-200;
 $btn-sec-clr-active: $clr-ntr-200;
 
+// ----- Hero
+$hero-marg-top: func.getRem(32);
+$hero-marg-top-sm: func.getRem(64);
+$hero-marg-top-xl: func.getRem(66);
+
 // ---------- LAYOUT
 
 // ----- Wrapper
