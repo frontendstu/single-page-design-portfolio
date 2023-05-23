@@ -84,7 +84,8 @@ $btn-padding: func.getRem(14) func.getRem(45);
 $btn-trans: $link-trans;
 $btn-trans-prop: null;
 $btn-radius: 33vw;
-$btn-font: $fw-bold $fs-100 $ff-pri;
+$btn-font: $fw-bold $fs-100 func.getRem(14);
+$btn-fs-sm: $fs-100;
 
 // --- Button: Primary
 $btn-pri-bg: $clr-ntr-900;
