@@ -24,4 +24,20 @@
       font-size: var.$hero-title-fs-xl;
     }
   }
+
+  &__copy {
+    max-width: var.$hero-copy-max-width;
+    margin-top: var.$hero-copy-marg-top;
+    margin-inline: auto;
+
+    @include mixin.breakpoint(sm) {
+      max-width: var.$hero-copy-max-width-sm;
+      margin-top: var.$hero-copy-marg-top-sm;
+    }
+
+    @include mixin.breakpoint(xl) {
+      max-width: var.$hero-copy-max-width-xl;
+      margin-top: var.$hero-copy-marg-top-xl;
+    }
+  }
 }
