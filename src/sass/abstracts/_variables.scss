@@ -114,3 +114,9 @@ $wrapper-max-width-xl: null;
 // ----- Header
 $header-marg-top: func.getRem(16);
 $header-marg-top-sm: func.getRem(34);
+
+// --- Header: Branding
+$header-brand-img-width: func.getRem(48);
+$header-brand-img-width-sm: func.getRem(64);
+$header-brand-img-height: $header-brand-img-width;
+$header-brand-img-height-sm: $header-brand-img-width-sm;
