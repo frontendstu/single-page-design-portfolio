@@ -1,2 +1,14 @@
 @use '../abstracts/mixins' as mixin;
 @use '../abstracts/variables' as var;
+
+.hero {
+  margin-top: var.$hero-marg-top;
+
+  @include mixin.breakpoint(sm) {
+    margin-top: var.$hero-marg-top-sm;
+  }
+
+  @include mixin.breakpoint(xl) {
+    margin-top: var.$hero-marg-top-xl;
+  }
+}
