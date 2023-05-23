@@ -11,4 +11,16 @@
   @include mixin.breakpoint(xl) {
     margin-top: var.$hero-marg-top-xl;
   }
+
+  .title {
+    font-size: var.$hero-title-fs;
+
+    @include mixin.breakpoint(sm) {
+      font-size: var.$hero-title-fs-sm;
+    }
+
+    @include mixin.breakpoint(xl) {
+      font-size: var.$hero-title-fs-xl;
+    }
+  }
 }
