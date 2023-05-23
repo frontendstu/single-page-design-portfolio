@@ -106,3 +106,7 @@ $wrapper-max-width-sm: func.getRem(690);
 $wrapper-max-width-md: null;
 $wrapper-max-width-lg: func.getRem(1110);
 $wrapper-max-width-xl: null;
+
+// ----- Header
+$header-marg-top: func.getRem(16);
+$header-marg-top-sm: func.getRem(34);
