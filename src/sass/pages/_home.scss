@@ -18,4 +18,24 @@
     grid-template-columns: var.$grid-cols-xl;
     margin-top: var.$grid-marg-top-xl;
   }
+
+  &__item {
+    display: grid;
+    grid-template-rows: auto min-content;
+    padding: var.$grid-item-padd;
+    border-radius: var.$grid-item-radius;
+    color: var.$grid-item-clr;
+    font-weight: var.$grid-item-fw;
+    font-size: var.$grid-item-fs;
+
+    img {
+      align-self: start;
+      margin-left: auto;
+    }
+
+    .title {
+      align-self: end;
+      color: inherit;
+    }
+  }
 }
