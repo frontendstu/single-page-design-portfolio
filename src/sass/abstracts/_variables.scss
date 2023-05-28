@@ -141,3 +141,19 @@ $header-brand-img-width: func.getRem(48);
 $header-brand-img-width-sm: func.getRem(64);
 $header-brand-img-height: $header-brand-img-width;
 $header-brand-img-height-sm: $header-brand-img-width-sm;
+
+// ---------- PAGES
+
+// ----- Home
+
+// --- Grid
+$grid-gap: func.getRem(24);
+$grid-rows: repeat(5, func.getRem(182));
+$grid-rows-sm: repeat(3, func.getRem(182));
+$grid-rows-xl: repeat(2, func.getRem(182));
+$grid-cols: auto;
+$grid-cols-xl: repeat(6, func.getRem(164));
+
+$grid-marg-top: func.getRem(32);
+$grid-marg-top-sm: func.getRem(64);
+$grid-marg-top-xl: func.getRem(80);
