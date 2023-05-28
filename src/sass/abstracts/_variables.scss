@@ -157,3 +157,10 @@ $grid-cols-xl: repeat(6, func.getRem(164));
 $grid-marg-top: func.getRem(32);
 $grid-marg-top-sm: func.getRem(64);
 $grid-marg-top-xl: func.getRem(80);
+
+// --- Grid Item
+$grid-item-padd: func.getRem(24);
+$grid-item-radius: 8px;
+$grid-item-clr: $clr-ntr-200;
+$grid-item-fw: $fw-bold;
+$grid-item-fs: func.getRem(24);
