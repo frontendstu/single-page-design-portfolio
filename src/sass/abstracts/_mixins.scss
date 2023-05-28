@@ -140,3 +140,9 @@ $breakpoints-down: (
     outline: $outline;
   }
 }
+
+// Create mixin for applying grid-row and grid-column styles
+@mixin grid-item-layout($col, $row) {
+  grid-column: $col;
+  grid-row: $row;
+}
