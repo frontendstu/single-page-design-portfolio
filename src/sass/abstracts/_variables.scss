@@ -104,24 +104,24 @@ $btn-sec-clr: $clr-ntr-200;
 $btn-sec-clr-active: $clr-ntr-200;
 
 // ----- Hero
-$hero-max-width-xl: func.getRem(752);
+$hero-max-width-lg: func.getRem(752);
 $hero-marg-top: func.getRem(32);
 $hero-marg-top-sm: func.getRem(64);
-$hero-marg-top-xl: func.getRem(66);
+$hero-marg-top-lg: func.getRem(66);
 
 // --- Hero: Title
-$hero-title-leading-xl: $leading-700;
+$hero-title-leading-lg: $leading-700;
 $hero-title-fs: func.getRem(36);
 $hero-title-fs-sm: func.getRem(44);
-$hero-title-fs-xl: $fs-600;
+$hero-title-fs-lg: $fs-600;
 
 // --- Hero: Copy
 $hero-copy-max-width: func.getRem(285);
 $hero-copy-max-width-sm: func.getRem(573);
-$hero-copy-max-width-xl: func.getRem(730);
+$hero-copy-max-width-lg: func.getRem(730);
 $hero-copy-marg-top: func.getRem(16);
 $hero-copy-marg-top-sm: func.getRem(27);
-$hero-copy-marg-top-xl: func.getRem(23);
+$hero-copy-marg-top-lg: func.getRem(23);
 
 // ---------- LAYOUT
 
@@ -150,13 +150,13 @@ $header-brand-img-height-sm: $header-brand-img-width-sm;
 $grid-gap: func.getRem(24);
 $grid-rows: repeat(5, func.getRem(182));
 $grid-rows-sm: repeat(3, func.getRem(182));
-$grid-rows-xl: repeat(2, func.getRem(182));
+$grid-rows-lg: repeat(2, func.getRem(182));
 $grid-cols: auto;
-$grid-cols-xl: repeat(6, func.getRem(164));
+$grid-cols-lg: repeat(6, func.getRem(164));
 
 $grid-marg-top: func.getRem(32);
 $grid-marg-top-sm: func.getRem(64);
-$grid-marg-top-xl: func.getRem(80);
+$grid-marg-top-lg: func.getRem(80);
 
 // --- Grid Item
 $grid-item-padd: func.getRem(24);

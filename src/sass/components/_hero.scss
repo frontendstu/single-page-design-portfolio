@@ -8,9 +8,9 @@
     margin-top: var.$hero-marg-top-sm;
   }
 
-  @include mixin.breakpoint(xl) {
-    max-width: var.$hero-max-width-xl;
-    margin-top: var.$hero-marg-top-xl;
+  @include mixin.breakpoint(lg) {
+    max-width: var.$hero-max-width-lg;
+    margin-top: var.$hero-marg-top-lg;
   }
 
   .title {
@@ -20,9 +20,9 @@
       font-size: var.$hero-title-fs-sm;
     }
 
-    @include mixin.breakpoint(xl) {
-      line-height: var.$hero-title-leading-xl;
-      font-size: var.$hero-title-fs-xl;
+    @include mixin.breakpoint(lg) {
+      line-height: var.$hero-title-leading-lg;
+      font-size: var.$hero-title-fs-lg;
     }
   }
 
@@ -36,9 +36,9 @@
       margin-top: var.$hero-copy-marg-top-sm;
     }
 
-    @include mixin.breakpoint(xl) {
-      max-width: var.$hero-copy-max-width-xl;
-      margin-top: var.$hero-copy-marg-top-xl;
+    @include mixin.breakpoint(lg) {
+      max-width: var.$hero-copy-max-width-lg;
+      margin-top: var.$hero-copy-marg-top-lg;
     }
   }
 }
