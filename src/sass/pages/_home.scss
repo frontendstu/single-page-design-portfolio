@@ -1,6 +1,7 @@
 @use '../abstracts/mixins' as mixin;
 @use '../abstracts/variables' as var;
 
+// ----- GRID DISPLAY
 .grid {
   display: grid;
   gap: var.$grid-gap;
@@ -38,11 +39,13 @@
       color: inherit;
     }
 
+    // --- Graphic Design
     &:nth-child(1) {
       grid-column: 1/3;
       grid-row: 1/3;
     }
 
+    // --- UI/UX
     &:nth-child(2) {
       grid-column: 1/2;
       grid-row: 4/3;
@@ -53,6 +56,7 @@
       }
     }
 
+    // --- Apps
     &:nth-child(3) {
       grid-column: 2/3;
       grid-row: 4/3;
@@ -63,6 +67,7 @@
       }
     }
 
+    // --- Photography
     &:nth-child(4) {
       grid-column: 1/3;
       grid-row: -2/-2;
@@ -73,6 +78,7 @@
       }
     }
 
+    // --- Illustrations
     &:nth-child(5) {
       grid-column: 1/3;
       grid-row: -3/-2;
@@ -88,6 +94,7 @@
       }
     }
 
+    // --- Motion Graphics
     &:nth-child(6) {
       grid-column: 1/3;
       grid-row: -1/-1;
