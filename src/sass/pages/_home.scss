@@ -129,8 +129,18 @@
     display: flex;
     justify-content: center;
 
+    @include mixin.breakpoint(sm) {
+      display: initial;
+    }
+
     img {
       width: var.$intro-img-width;
+
+      @include mixin.breakpoint(sm) {
+        width: var.$intro-img-width-sm;
+        position: absolute;
+        left: var.$intro-img-left-pos-sm;
+      }
     }
   }
 
