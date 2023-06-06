@@ -164,3 +164,32 @@ $grid-item-radius: 8px;
 $grid-item-clr: $clr-ntr-200;
 $grid-item-fw: $fw-bold;
 $grid-item-fs: func.getRem(24);
+
+// --- Introduction
+$intro-width: func.getRem(343);
+$intro-width-sm: func.getRem(772);
+$intro-width-lg: func.getRem(1110);
+$intro-marg-top: func.getRem(100);
+$intro-marg-top-sm: func.getRem(120);
+$intro-marg-top-lg: func.getRem(136);
+
+$intro-img-left-pos-sm: -40px;
+$intro-img-width: func.getRem(300);
+$intro-img-width-sm: func.getRem(364);
+$intro-img-width-lg: func.getRem(445);
+
+$intro-content-width: func.getRem(339);
+$intro-content-width-sm: func.getRem(339);
+$intro-content-width-lg: func.getRem(540);
+$intro-content-marg-top: func.getRem(40);
+$intro-content-leading: 26px;
+$intro-content-text-align: center;
+$intro-content-text-align-sm: left;
+$intro-content-title-leading: 33px;
+$intro-content-title-leading-sm: $leading-400;
+$intro-content-title-leading-lg: 50px;
+$intro-content-title-fs: func.getRem(26);
+$intro-content-title-fs-sm: $fs-400;
+$intro-content-title-fs-lg: $fs-500;
+$intro-content-p-marg-top: func.getRem(24);
+$intro-content-btn-marg-top: func.getRem(24);
