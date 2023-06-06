@@ -175,6 +175,7 @@
 
     @include mixin.breakpoint(lg) {
       width: var.$intro-content-width-lg;
+      margin-top: var.$intro-content-marg-top-lg;
     }
 
     h2 {
