@@ -154,9 +154,22 @@
     margin-inline: auto;
     text-align: var.$intro-content-text-align;
 
+    @include mixin.breakpoint(sm) {
+      justify-content: flex-end;
+      margin-top: 0;
+      margin-inline: unset;
+      margin-left: auto;
+      text-align: var.$intro-content-text-align-sm;
+    }
+
     h2 {
       line-height: var.$intro-content-title-leading;
       font-size: var.$intro-content-title-fs;
+
+      @include mixin.breakpoint(sm) {
+        line-height: var.$intro-content-title-leading-sm;
+        font-size: var.$intro-content-title-fs-sm;
+      }
     }
 
     p {
@@ -165,6 +178,10 @@
 
     button {
       margin-top: var.$intro-content-btn-marg-top;
+
+      @include mixin.breakpoint(sm) {
+        margin-right: auto;
+      }
     }
   }
 }
