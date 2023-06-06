@@ -147,6 +147,11 @@
         position: absolute;
         left: var.$intro-img-left-pos-sm;
       }
+
+      @include mixin.breakpoint(lg) {
+        left: auto;
+        width: var.$intro-img-width-lg;
+      }
     }
   }
 
