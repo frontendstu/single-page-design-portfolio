@@ -111,3 +111,44 @@
     }
   }
 }
+
+// ----- INTRODUCTION
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var.$intro-width;
+  margin-top: var.$intro-marg-top;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: var.$intro-img-width;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var.$intro-content-width;
+    margin-top: var.$intro-content-marg-top;
+    margin-inline: auto;
+    text-align: var.$intro-content-text-align;
+
+    h2 {
+      line-height: var.$intro-content-title-leading;
+      font-size: var.$intro-content-title-fs;
+    }
+
+    p {
+      margin-top: var.$intro-content-p-marg-top;
+    }
+
+    button {
+      margin-top: var.$intro-content-btn-marg-top;
+    }
+  }
+}
