@@ -125,6 +125,11 @@
     margin-top: var.$intro-marg-top-sm;
   }
 
+  @include mixin.breakpoint(lg) {
+    width: var.$intro-width-lg;
+    margin-top: var.$intro-marg-top-lg;
+  }
+
   &__img {
     display: flex;
     justify-content: center;
