@@ -216,4 +216,16 @@
     line-height: var.$work-title-leading;
     font-size: var.$work-title-fs;
   }
+
+  &__slider {
+    margin-top: var.$work-slider-marg-top;
+  }
+
+  &__slide {
+    padding-right: 15px;
+
+    img {
+      border-radius: 10px;
+    }
+  }
 }
