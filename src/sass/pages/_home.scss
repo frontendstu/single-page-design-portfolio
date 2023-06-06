@@ -166,6 +166,7 @@
 
     @include mixin.breakpoint(sm) {
       justify-content: flex-end;
+      width: var.$intro-content-width-sm;
       margin-top: 0;
       margin-inline: unset;
       margin-left: auto;
