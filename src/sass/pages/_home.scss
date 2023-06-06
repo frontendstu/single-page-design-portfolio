@@ -135,6 +135,7 @@
 
     img {
       width: var.$intro-img-width;
+      position: unset;
 
       @include mixin.breakpoint(sm) {
         width: var.$intro-img-width-sm;
