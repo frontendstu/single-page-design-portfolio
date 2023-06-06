@@ -120,6 +120,11 @@
   width: var.$intro-width;
   margin-top: var.$intro-marg-top;
 
+  @include mixin.breakpoint(sm) {
+    width: var.$intro-width-sm;
+    margin-top: var.$intro-marg-top-sm;
+  }
+
   &__img {
     display: flex;
     justify-content: center;
