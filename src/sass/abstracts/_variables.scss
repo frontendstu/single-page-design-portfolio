@@ -103,6 +103,15 @@ $btn-sec-bg-active: $clr-orge;
 $btn-sec-clr: $clr-ntr-200;
 $btn-sec-clr-active: $clr-ntr-200;
 
+// --- Button: Slider Controls
+$btn-slider-padding: func.getRem(25);
+$btn-slider-marg-top: func.getRem(32);
+$btn-slider-marg-top-sm: func.getRem(56);
+$btn-slider-marg-right: func.getRem(16);
+$btn-slider-radius: 33vw;
+$btn-slider-bg: $btn-pri-bg;
+$btn-slider-bg-active: $btn-pri-bg-active;
+
 // ----- Hero
 $hero-max-width-lg: func.getRem(752);
 $hero-marg-top: func.getRem(32);
