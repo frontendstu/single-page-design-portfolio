@@ -212,6 +212,14 @@
   margin-top: var.$work-marg-top;
   text-align: var.$work-text-align;
 
+  @include mixin.breakpoint(sm) {
+    margin-top: var.$work-marg-top-sm;
+  }
+
+  @include mixin.breakpoint(lg) {
+    margin-top: var.$work-marg-top-lg;
+  }
+
   .title {
     line-height: var.$work-title-leading;
     font-size: var.$work-title-fs;
