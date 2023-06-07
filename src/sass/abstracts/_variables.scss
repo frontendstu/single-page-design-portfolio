@@ -119,6 +119,8 @@ $hero-marg-top-sm: func.getRem(64);
 $hero-marg-top-lg: func.getRem(66);
 
 // --- Hero: Title
+$hero-title-leading: 45px;
+$hero-title-leading-sm: 55px;
 $hero-title-leading-lg: $leading-700;
 $hero-title-fs: func.getRem(36);
 $hero-title-fs-sm: func.getRem(44);
