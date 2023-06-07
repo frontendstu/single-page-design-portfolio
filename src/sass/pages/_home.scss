@@ -222,10 +222,14 @@
   }
 
   &__slide {
-    padding-right: 15px;
+    padding-right: var.$work-slider-slide-padding-right;
+
+    @include mixin.breakpoint(sm) {
+      padding-right: var.$work-slider-slide-padding-right-sm;
+    }
 
     img {
-      border-radius: 10px;
+      border-radius: var.$work-slider-slide-img-radius;
     }
   }
 }
