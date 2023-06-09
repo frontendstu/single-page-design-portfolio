@@ -297,6 +297,10 @@
     &__content {
       grid-column: 1;
       width: var.$cta-content-width-lg;
+
+      p {
+        margin-top: var.$cta-content-p-marg-top-lg;
+      }
     }
 
     &__btn {
