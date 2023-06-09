@@ -155,8 +155,8 @@ $header-brand-img-height: $header-brand-img-width;
 $header-brand-img-height-sm: $header-brand-img-width-sm;
 
 // ----- Footer
-$footer-marg-top: func.getRem(40);
-$footer-marg-top-sm: func.getRem(56);
+$footer-marg-block: func.getRem(40) func.getRem(32);
+$footer-marg-block-sm: func.getRem(56);
 
 // ---------- PAGES
 

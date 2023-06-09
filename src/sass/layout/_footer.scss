@@ -6,9 +6,9 @@
 // this at a later stage.
 
 .footer {
-  margin-top: var.$footer-marg-top;
+  margin-block: var.$footer-marg-block;
 
   @include mixin.breakpoint(sm) {
-    margin-top: var.$footer-marg-top-sm;
+    margin-block: var.$footer-marg-block-sm;
   }
 }
