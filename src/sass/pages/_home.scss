@@ -248,3 +248,24 @@
     }
   }
 }
+
+// --- Call to Action
+.cta {
+  margin-top: var.$cta-marg-top;
+  padding: var.$cta-padd;
+  border-radius: var.$cta-radius;
+  background-color: var.$cta-bg;
+  color: var.$cta-clr;
+  text-align: var.$cta-text-align;
+
+  @include mixin.breakpoint(sm) {
+    padding: var.$cta-padd-sm;
+    margin-top: var.$cta-marg-top-sm;
+  }
+
+  @include mixin.breakpoint(lg) {
+    padding: var.$cta-padd-lg;
+    text-align: var.$cta-text-align-lg;
+    margin-top: var.$cta-marg-top-lg;
+  }
+}
