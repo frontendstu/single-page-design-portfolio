@@ -154,6 +154,10 @@ $header-brand-img-width-sm: func.getRem(64);
 $header-brand-img-height: $header-brand-img-width;
 $header-brand-img-height-sm: $header-brand-img-width-sm;
 
+// ----- Footer
+$footer-marg-top: func.getRem(40);
+$footer-marg-top-sm: func.getRem(56);
+
 // ---------- PAGES
 
 // ----- Home
