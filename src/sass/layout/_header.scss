@@ -3,6 +3,8 @@
 
 .header,
 .footer {
+  // I have included .footer here, there's no sense repeating myself
+
   @include mixin.flex;
   margin-top: var.$header-marg-top;
 
