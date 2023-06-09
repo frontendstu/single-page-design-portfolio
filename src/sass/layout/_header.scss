@@ -1,7 +1,8 @@
 @use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mixin;
 
-.header {
+.header,
+.footer {
   @include mixin.flex;
   margin-top: var.$header-marg-top;
 
