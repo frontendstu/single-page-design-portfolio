@@ -228,6 +228,8 @@ $work-slider-slide-padding-right-sm: func.getRem(30);
 $work-slider-slide-img-radius: 10px;
 
 // --- Call to Action
+$cta-gap: func.getRem(24);
+$cta-gap-sm: func.getRem(26);
 $cta-padd: func.getRem(49) func.getRem(24);
 $cta-padd-sm: func.getRem(56) func.getRem(75);
 $cta-padd-lg: func.getRem(81) func.getRem(65);
