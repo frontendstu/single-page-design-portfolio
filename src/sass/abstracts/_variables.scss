@@ -241,3 +241,10 @@ $cta-bg: $clr-ntr-900;
 $cta-clr: $clr-ntr-100;
 $cta-text-align: center;
 $cta-text-align-lg: left;
+
+$cta-title-leading: 33px;
+$cta-title-leading-sm: $leading-400;
+$cta-title-leading-lg: $leading-500;
+$cta-title-fs: func.getRem(26);
+$cta-title-fs-sm: $fs-400;
+$cta-title-fs-lg: $fs-500;
