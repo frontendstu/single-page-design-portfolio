@@ -4,3 +4,11 @@
 // See _header.scss for footer styling. They both feature the same styles and
 // it's bad practice to repeat yourself. I might look into creating a mixin for
 // this at a later stage.
+
+.footer {
+  margin-top: var.$footer-marg-top;
+
+  @include mixin.breakpoint(sm) {
+    margin-top: var.$footer-marg-top-sm;
+  }
+}
