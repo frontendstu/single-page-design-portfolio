@@ -251,14 +251,20 @@
 
 // --- Call to Action
 .cta {
-  margin-top: var.$cta-marg-top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var.$cta-gap;
   padding: var.$cta-padd;
+  margin-top: var.$cta-marg-top;
   border-radius: var.$cta-radius;
   background-color: var.$cta-bg;
   color: var.$cta-clr;
   text-align: var.$cta-text-align;
 
   @include mixin.breakpoint(sm) {
+    gap: var.$cta-gap-sm;
     padding: var.$cta-padd-sm;
     margin-top: var.$cta-marg-top-sm;
   }
