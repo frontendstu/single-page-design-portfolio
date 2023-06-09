@@ -236,6 +236,10 @@
     margin-top: var.$work-slider-marg-top;
   }
 
+  .tns-nav {
+    display: none;
+  }
+
   &__slide {
     padding-right: var.$work-slider-slide-padding-right;
 
