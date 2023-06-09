@@ -293,14 +293,22 @@
     }
   }
 
-  @include mixin.breakpoint(lg) {
-    &__content {
-      grid-column: 1;
-      width: var.$cta-content-width-lg;
+  &__content {
+    p {
+      margin-top: var.$cta-content-p-marg-top;
 
-      p {
+      @include mixin.breakpoint(sm) {
+        margin-top: var.$cta-content-p-marg-top-sm;
+      }
+
+      @include mixin.breakpoint(lg) {
         margin-top: var.$cta-content-p-marg-top-lg;
       }
+    }
+
+    @include mixin.breakpoint(lg) {
+      grid-column: 1;
+      width: var.$cta-content-width-lg;
     }
 
     &__btn {
