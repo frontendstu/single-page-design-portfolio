@@ -14,9 +14,11 @@
   }
 
   .title {
+    line-height: var.$hero-title-leading;
     font-size: var.$hero-title-fs;
 
     @include mixin.breakpoint(sm) {
+      line-height: var.$hero-title-leading-sm;
       font-size: var.$hero-title-fs-sm;
     }
 
