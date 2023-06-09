@@ -270,6 +270,8 @@
   }
 
   @include mixin.breakpoint(lg) {
+    display: grid;
+    grid-template-columns: 1fr auto;
     padding: var.$cta-padd-lg;
     text-align: var.$cta-text-align-lg;
     margin-top: var.$cta-marg-top-lg;
@@ -288,6 +290,17 @@
       margin-right: auto;
       line-height: var.$cta-title-leading-sm;
       font-size: var.$cta-title-fs-sm;
+    }
+  }
+
+  @include mixin.breakpoint(lg) {
+    &__content {
+      grid-column: 1;
+      width: var.$cta-content-width-lg;
+    }
+
+    &__btn {
+      grid-column: 2;
     }
   }
 }
