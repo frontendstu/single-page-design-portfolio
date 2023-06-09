@@ -226,3 +226,16 @@ $work-slider-marg-top-sm: func.getRem(56);
 $work-slider-slide-padding-right: func.getRem(15);
 $work-slider-slide-padding-right-sm: func.getRem(30);
 $work-slider-slide-img-radius: 10px;
+
+// --- Call to Action
+$cta-padd: func.getRem(49) func.getRem(24);
+$cta-padd-sm: func.getRem(56) func.getRem(75);
+$cta-padd-lg: func.getRem(81) func.getRem(65);
+$cta-marg-top: func.getRem(100);
+$cta-marg-top-sm: func.getRem(120);
+$cta-marg-top-lg: func.getRem(88);
+$cta-radius: 10px;
+$cta-bg: $clr-ntr-900;
+$cta-clr: $clr-ntr-100;
+$cta-text-align: center;
+$cta-text-align-lg: left;
