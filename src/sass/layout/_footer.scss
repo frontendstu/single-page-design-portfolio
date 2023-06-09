@@ -1,2 +1,6 @@
 @use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mixin;
+
+// See _header.scss for footer styling. They both feature the same styles and
+// it's bad practice to repeat yourself. I might look into creating a mixin for
+// this at a later stage.
