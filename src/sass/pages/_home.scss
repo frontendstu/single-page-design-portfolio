@@ -274,4 +274,20 @@
     text-align: var.$cta-text-align-lg;
     margin-top: var.$cta-marg-top-lg;
   }
+
+  .title {
+    line-height: var.$cta-title-leading;
+    font-size: var.$cta-title-fs;
+
+    @include mixin.breakpoint(sm) {
+      line-height: var.$cta-title-leading-sm;
+      font-size: var.$cta-title-fs-sm;
+    }
+
+    @include mixin.breakpoint(lg) {
+      margin-right: auto;
+      line-height: var.$cta-title-leading-sm;
+      font-size: var.$cta-title-fs-sm;
+    }
+  }
 }
