@@ -255,4 +255,6 @@ $cta-title-fs-lg: $fs-500;
 
 // --- Call to Action: Content
 $cta-content-width-lg: func.getRem(540);
+$cta-content-p-marg-top: func.getRem(24);
+$cta-content-p-marg-top-sm: func.getRem(26);
 $cta-content-p-marg-top-lg: func.getRem(25);
