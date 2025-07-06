@@ -1,0 +1,20 @@
+/** 
+ * GLOBALS
+ *
+ * Globals styles apply universally across the project. These styles establish 
+ * a consistent baseline including foundational elements such as resets, 
+ * boilerplate structure, and font declarations.
+ *
+ * Included partials
+ * - _reset.scss        : Resets browser default styles for consistency
+ * - _fonts.scss        : Custom font-face declarations
+ * - _boilerplate.scss  : Base HTML elements, body styles and default typography
+ *
+ * These styles are loaded early in the cascade and should not contain 
+ * component-specific rules. They form the groundwork for the reset of the 
+ * design system.
+ */
+
+@forward 'reset';
+@forward 'fonts';
+@forward 'boilerplate';
