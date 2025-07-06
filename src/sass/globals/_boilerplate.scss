@@ -17,3 +17,15 @@
  * These styles are intended to complement the reset and abstract layers, 
  * providing a clean, accessible and token-driven baseline for the UI.
  */
+
+/* ------------------------------- */
+/* Body                           */
+/* ------------------------------- */
+
+
+body {
+  background-color: var(--body-bg);
+  color: var(--body-clr);
+  font: var(--body-font);
+  line-height: var(--body-leading);
+}

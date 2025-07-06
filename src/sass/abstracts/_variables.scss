@@ -55,6 +55,14 @@
     --leading-100: 26px;
     --leading-200: 28px;
 
+    /********** BOILERPLATE */
+
+    /* Body */
+    --body-bg: var(--clr-neutral-100-hsl);
+    --body-clr: var(--clr-neutral-500-hsl);
+    --body-font: var(--fw-med) var(--fs-200) var(--ff-pri);
+    --body-leading: var(--leading-100);
+
     /********** MEDIA QUERIES */
     
     /* 768px */
