@@ -1,0 +1,13 @@
+// ABSTRACTS
+//
+// Abstracts typically contain configuration and design tokens such as 
+// variables, functions, and mixins. While most abstract partials do not output 
+// CSS directly, this index includes the CSS custom properties for the project 
+// which will be compiled.
+//
+// Included partials
+// - _variables.scss : Defines CSS custom properties
+// - _mixins.scss : Contains reusable Sass mixins for layout, etc
+
+@forward 'variables';
+@forward 'mixins';
