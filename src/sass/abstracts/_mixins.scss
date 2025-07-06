@@ -82,3 +82,29 @@
         @content;
     }
 }
+
+// FLEXBOX
+//
+// This mixin provides a shorthand utility for applying common Flexbox layout 
+// properties in a consistent and readable way. It simplifies the declaration 
+// of `display: flex;` along with optional arguments and direction settings.
+//
+// This mixin is intended for layout scaffolding and should be used in layout 
+// or component partials where Flexbox alignment and spacing are needed.
+
+// Mixin: flex($align: null, $justify: null, $direction: null, $gap: null)
+/// @param {String} $align - Sets `align-items` (default: center)
+/// @param {String} $justify - Sets `justify-content` (default: center)
+/// @param {String} $direction - Sets `flex-direction` (default: column)
+/// @param {String | null} $gap - Sets `gap` between flex items (default: null)
+/// 
+/// @example scss - Basic usage
+///     @include flex(center, center, row, 1rem);
+
+@mixin flex($align: center, $justify: center, $direction: column, $gap: null) {
+    display: felx;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    gap: $gap;
+}
