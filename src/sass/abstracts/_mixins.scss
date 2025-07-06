@@ -40,6 +40,8 @@
 // - hover              : Applies styles on `:hover` only
 // - hover-focus        : Applies styles on `:hover` and `:focus-visible`
 // - hover-focus-within : Applies styles on `:hover`, `:focus-within`
+// - focus              : Applies styles on `:focus-visible` only
+// - focus-within       : Applies styles on `:focus-within` only
 
 @mixin hover {
     &:hover {
@@ -56,6 +58,18 @@
 
 @mixin hover-focus-within {
     &:hover,
+    &:focus-within {
+        @content;
+    }
+}
+
+@mixin focus {
+    &:focus-visible {
+        @content;
+    }
+}
+
+@mixin focus-within {
     &:focus-within {
         @content;
     }
