@@ -52,3 +52,16 @@ a {
     border-radius: var(--link-outline-radius);
   }
 }
+
+/* --------------------------------------------------------------------
+ * Heading
+ *
+ * The global styles for `.heading` only include the font-weight and 
+ * font-family properties. Heading styles (font-size, color, etc need 
+ * to be specically declared where required.
+ * ------------------------------------------------------------------- */
+
+.heading {
+  font-weight: var(--heading-fw);
+  font-family: var(--heading-ff);
+}
