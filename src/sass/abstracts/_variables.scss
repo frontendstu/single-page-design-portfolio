@@ -31,7 +31,7 @@
     --clr-neutral-100-hsl: hsl(var(--clr-neutral-100));
     --clr-neutral-500-hsl: hsl(var(--clr-neutral-500));
     --clr-neutral-900-hsl: hsl(var(--clr-neutral-900));
-    
+
     --clr-galactic-blue-hsl: hsl(--clr-galactic-blue);
     --clr-summer-yellow-hsl: hsl(--clr-summer-yellow);
     --clr-pink-hsl: hsl(--clr-pink);
@@ -39,4 +39,35 @@
     --clr-cyan-hsl: hsl(--clr-cyan);
     --clr-dark-purple-hsl: hsl(--clr-dark-purple);
 
+    /********** FONTS & TYPOGRAPHY */
+    --fw-med: 500;
+    --fw-bold: 700;
+
+    --fs-100: 0.875rem; /* 14px */
+    --fs-200: 1rem;     /* 16px */
+    --fs-300: 1.5rem;   /* 24px */
+    --fs-400: 1.625rem; /* 26px */
+    --fs-500: 2.25rem;  /* 36px */
+
+    
+    --ff-pri: 'Plus Jakarta Sans', sans-serif;
+
+    --leading-100: 26px;
+    --leading-200: 28px;
+
+    /********** MEDIA QUERIES */
+    
+    /* 768px */
+    @media(min-width: 48em) {
+        --fs-100: 1rem;     /* 16px */
+        --fs-200: 1.125rem; /* 18px */
+        --fs-400: 2rem;     /* 32px */
+        --fs-500: 2.75rem;  /* 44px */
+    }
+
+    /* 1280px */
+    @media(min-width: 80em) {
+        --fs-400: 2.5rem;   /* 40px */
+        --fs-500: 3.5rem;   /* 56px */
+    }
 }
