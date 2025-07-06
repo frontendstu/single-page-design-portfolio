@@ -63,6 +63,16 @@
     --body-font: var(--fw-med) var(--fs-200) var(--ff-pri);
     --body-leading: var(--leading-100);
 
+    /* Links */
+    --link-transition: 150ms ease-in-out;
+    --link-clr: inherit;
+    --link-clr-hover: inherit;
+    --link-decoration: none;
+    --link-deoraction-hover: none;
+    --link-outline: 3px solid hsl(var(--clr-galactic-blue) / 0.75);
+    --link-outline-offset: 2px;
+    --link-outline-radius: 3px;
+
     /********** MEDIA QUERIES */
     
     /* 768px */

@@ -24,10 +24,31 @@
 /* Body                            */
 /* ------------------------------- */
 
-
 body {
   background-color: var(--body-bg);
   color: var(--body-clr);
   font: var(--body-font);
   line-height: var(--body-leading);
+}
+
+/* ------------------------------- */
+/* Links                           */
+/* ------------------------------- */
+
+a {
+  transition: var(--link-transition);
+  color: var(--link-clr);
+  text-decoration: var(--link-decoration);
+
+  @include mixin.hover {
+    color: var(--link-clr-hover);
+    text-decoration: none;
+  }
+
+  @include mixin.focus-all {
+    transition: none;
+    outline: var(--link-outline);
+    outline-offset: var(--link-outline-offset);
+    border-radius: var(--link-outline-radius);
+  }
 }
