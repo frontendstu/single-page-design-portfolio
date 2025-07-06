@@ -13,3 +13,14 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+/* ------------------------------- */
+/* PLUS JAKARTA SANS               */
+/* ------------------------------- */
+
+@include mixin.font-face(
+  $font-family: 'Plus Jakarta Sans',
+  $font-uri: '../assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf',
+  $font-weight: 500 800
+);
+
