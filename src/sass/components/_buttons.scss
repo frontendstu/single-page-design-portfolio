@@ -1,0 +1,17 @@
+/**
+ * BUTTONS
+ *
+ * This partial defines the base styles and variants for button components. 
+ * Buttons should be styled consistently across the UI, with clear visual 
+ * hierarchy and accessible focus states.
+ *
+ * Included styles:
+ * - `.btn`     : Base button elements with reset and shared styles
+ * - `.btn-pri` : Primary action button styling
+ * - `.btn-sec` : Secondary action button for a less proinent style
+ * - `.btn-icn` : Buttons that only use an icon, i.e. slide prev/next slide
+ *
+ * This partial should be imported through the components index
+ */
+
+@use '../abstracts/mixins' as mixin;
