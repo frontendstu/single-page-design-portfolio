@@ -1,0 +1,16 @@
+/**
+ * CONTAINER
+ *
+ * The container partial defines the container to constrain content width and 
+ * apply consistent horizontal padding across the site. The container class 
+ * help maintain readable line lengths and align content within the design grid.
+ *
+ * Included styles:
+ * - container.scss : Container wrapper with max-width and padding-inline
+ *
+ * The container styles remain structual and avoid component-specific design. 
+ * The container class is intended to be used across layouts and components to 
+ * ensure consistent spacing and alignment.
+ */
+
+@use '../abstracts/mixins' as mixin;
