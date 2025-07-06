@@ -1,0 +1,49 @@
+{
+  "name": "single-page-design-portfolio",
+  "version": "1.0.0",
+  "description": "My solution to the Frontend Mentor \"Single Page Design Portfolio\" challenge",
+  "main": "index.html",
+  "scripts": {
+    "build:sass": "sass  --no-source-map src/sass:public/css",
+    "copy:assets": "copyfiles -u 1 ./src/assets/{images,fonts}/**/**/**/* public",
+    "copy:html": "copyfiles -u 1 ./src/*.html public",
+    "copy:js": "copyfiles -u 1 ./src/js/**/* public",
+    "copy": "npm-run-all --parallel copy:*",
+    "watch:assets": "onchange \"/src/assets/**/*\" -- npm run copy:assets",
+    "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
+    "watch:js": "onchange \"src/js/**/*\" -- npm run copy:js",
+    "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --server public --files public",
+    "start": "npm-run-all copy --parallel watch serve",
+    "build": "npm-run-all copy:html build:*",
+    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^3.0.3",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^7.0.6",
+    "lru-cache": "^11.1.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.78.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontendstu/single-page-design-portfolio.git"
+  },
+  "keywords": [
+    "frontendmentor",
+    "css",
+    "sass",
+    "html"
+  ],
+  "author": "Frontend Stu (Stu Cowley)",
+  "license": "GPL-2.0-only",
+  "bugs": {
+    "url": "https://github.com/frontendstu/single-page-design-portfolio/issues"
+  },
+  "homepage": "https://github.com/frontendstu/single-page-design-portfolio#readme"
+}
