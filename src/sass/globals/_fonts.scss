@@ -1,0 +1,15 @@
+/**
+ * FONTS
+ *
+ * The fonts partial handles custom fonts imports for the project using the 
+ * `font-face` mixin. It ensures that fonts are loaded efficiently and 
+ * consistently across the UI.
+ *
+ * Font files are imported using `font-display: swap` for performance, and 
+ * font-weights/styles are declared explicity for clarity and control.
+ *
+ * This file is imported early in the global layer to ensure fonts are 
+ * available before layout and component styles are applied.
+ */
+
+@use '../abstracts/mixins' as mixin;
