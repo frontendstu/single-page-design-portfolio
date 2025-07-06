@@ -62,6 +62,22 @@ a {
  * ------------------------------------------------------------------- */
 
 .heading {
-  font-weight: var(--heading-fw);
-  font-family: var(--heading-ff);
+    font-weight: var(--heading-fw);
+    font-family: var(--heading-ff);
+}
+
+/* --------------------------------------------------------------------
+ * Accessibility
+ * -------------------------------------------------------------------- */
+
+.sr-only {
+    position: absolute !important;
+    clip-path: inset(50%) !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
 }
