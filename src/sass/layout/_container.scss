@@ -14,3 +14,9 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.container {
+    max-width: var(--container-max-w);
+    padding-inline: var(--padding-px);
+    margin-inline: auto;
+}

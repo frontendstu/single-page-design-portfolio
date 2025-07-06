@@ -77,6 +77,13 @@
     --heading-fw: inherit;
     --heading-ff: inherit;
 
+    /********** LAYOUT */
+
+    /* Container */
+    --container-max-w: 21.375rem; /* 342px */
+    --container-px: 0.375rem;
+
+
     /********** MEDIA QUERIES */
     
     /* 768px */
@@ -85,11 +92,17 @@
         --fs-200: 1.125rem; /* 18px */
         --fs-400: 2rem;     /* 32px */
         --fs-500: 2.75rem;  /* 44px */
+
+        --container-max-w: 43.125rem; /* 690px */
+        --container-px: 0.5rem;
     }
 
     /* 1280px */
     @media(min-width: 80em) {
         --fs-400: 2.5rem;   /* 40px */
         --fs-500: 3.5rem;   /* 56px */
+
+        --container-max-w: 55.875rem; /* 894px */
+        --container-px: 0.75rem;
     }
 }
