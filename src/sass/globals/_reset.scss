@@ -1,0 +1,19 @@
+/**
+ * RESET
+ *
+ * A minimal CSS reset to establish a consistent and predicable baseline across 
+ * browsers. This reset removes default spacing, normalises box sizing and 
+ * ensures media and structual elements behave consistently.
+ *
+ * Included resets:
+ * - Universal box-sizing set to border-box for layout consistency
+ * - Margin, padding and font inheritance reset on all elements
+ * - Sets `color-scheme: light` on html to support system themes
+ * - Ensures body takes up full viewport height
+ * - Media elements (img, video, svg, picture) are block-level and responsive
+ * - Removes default list styles from <ul> and <ol> elements
+ *
+ * This reset is intentionally lightwight and designed to compliment 
+ * boilerplate and component styles without having to introduce heavy-handed 
+ * overrides.
+ */
