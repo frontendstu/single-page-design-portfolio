@@ -29,3 +29,34 @@
         font-style: $font-style;
     }
 }
+
+// LINK STATES
+//
+// These mixins provide reusable patterns for managing link and interactive 
+// element states. They encapsulate common pseudo-class combinations to ensure 
+// consistent styling and accessibility across the UI.
+//
+// Included mixins:
+// - hover              : Applies styles on `:hover` only
+// - hover-focus        : Applies styles on `:hover` and `:focus-visible`
+// - hover-focus-within : Applies styles on `:hover`, `:focus-within`
+
+@mixin hover {
+    &:hover {
+        @content;
+    }
+}
+
+@mixin hover-focus {
+    &:hover,
+    &:focus-visible {
+        @content;
+    }
+}
+
+@mixin hover-focus-within {
+    &:hover,
+    &:focus-within {
+        @content;
+    }
+}
