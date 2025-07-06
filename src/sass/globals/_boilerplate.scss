@@ -1,0 +1,19 @@
+/**
+ * BOILERPLATE
+ *
+ * This partial defines foundational element styles that apply globally across 
+ * the project. These styles establish consistent visual defaults for key HTML 
+ * elements using design tokens and utility mixins.
+ *
+ * Included styles
+ * - `body`     : Applied base background, text colour, font, and line-height
+ * - `a`        : Defines link colour, decoration, transitions, and 
+ *                accessibility enhancements via hover, focus and outline mixins
+ * - `.heading` : Utility class for consistent heading font weight and family, 
+ *                font size and colour is defined when required
+ * - `.sr-only` : Accessibility utility for visually hiding elements while  
+ *                keeping them accessible to screen
+ *
+ * These styles are intended to complement the reset and abstract layers, 
+ * providing a clean, accessible and token-driven baseline for the UI.
+ */
