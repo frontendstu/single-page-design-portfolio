@@ -17,27 +17,16 @@
      * element.
      */
 
-    --clr-neutral-100: 28 100% 97%;
-    --clr-neutral-500: 30 5% 45%;
-    --clr-neutral-900: 0 0% 1%;
-    
-    --clr-galactic-blue: 252 66% 62%;
-    --clr-summer-yellow: 28 89% 67%;
-    --clr-pink: 0 78% 79%;
-    --clr-light-red: 7 77% 66%;
-    --clr-cyan: 172 46% 57%;
-    --clr-dark-purple: 314 45% 23%;
+    --clr-neutral-100: hsl(var(--clr-neutral-100));
+    --clr-neutral-500: hsl(var(--clr-neutral-500));
+    --clr-neutral-900: hsl(var(--clr-neutral-900));
 
-    --clr-neutral-100-hsl: hsl(var(--clr-neutral-100));
-    --clr-neutral-500-hsl: hsl(var(--clr-neutral-500));
-    --clr-neutral-900-hsl: hsl(var(--clr-neutral-900));
-
-    --clr-galactic-blue-hsl: hsl(--clr-galactic-blue);
-    --clr-summer-yellow-hsl: hsl(--clr-summer-yellow);
-    --clr-pink-hsl: hsl(--clr-pink);
-    --clr-light-red-hsl: hsl(--clr-light-red);
-    --clr-cyan-hsl: hsl(--clr-cyan);
-    --clr-dark-purple-hsl: hsl(--clr-dark-purple);
+    --clr-galactic-blue: hsl(--clr-galactic-blue);
+    --clr-summer-yellow: hsl(--clr-summer-yellow);
+    --clr-pink: hsl(--clr-pink);
+    --clr-light-red: hsl(--clr-light-red);
+    --clr-cyan: hsl(--clr-cyan);
+    --clr-dark-purple: hsl(--clr-dark-purple);
 
     /********** FONTS & TYPOGRAPHY */
     --fw-med: 500;
