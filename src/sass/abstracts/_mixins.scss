@@ -12,14 +12,6 @@
 //
 // This mixin simplifies font registration and enforces best practices like 
 // `font-display: swap` for improved performance.
-//
-/// @param {String} $font-family - The name of the font family
-/// @param {String} $font-uri - The relative path to the font file
-/// @param {Number|String} $font-weight - The relative font weight
-/// @param {String} $font-style ['normal'] - The font style
-/// 
-/// @example scss - Usage
-///     @include font-face('Inter', 'fonts/Inter.woff2', 400);
 
 @mixin font-face($font-family, $font-uri, $font-weight, $font-style: normal) {
     @font-face {
@@ -91,15 +83,6 @@
 //
 // This mixin is intended for layout scaffolding and should be used in layout 
 // or component partials where Flexbox alignment and spacing are needed.
-
-// Mixin: flex($align: null, $justify: null, $direction: null, $gap: null)
-/// @param {String} $align - Sets `align-items` (default: center)
-/// @param {String} $justify - Sets `justify-content` (default: center)
-/// @param {String} $direction - Sets `flex-direction` (default: column)
-/// @param {String | null} $gap - Sets `gap` between flex items (default: null)
-/// 
-/// @example scss - Basic usage
-///     @include flex(center, center, row, 1rem);
 
 @mixin flex($align: center, $justify: center, $direction: column, $gap: null) {
     display: felx;
