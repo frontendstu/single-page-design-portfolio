@@ -123,8 +123,7 @@
     $text-transform: null,
     $text-decoration: none,
     $text-decoration-hover: none,
-    $outline: null,
-    $outline-offset: null
+    $outline-color: null,
 ) {
     @if $gap != null { gap: $gap; }
     @if $padding != null { padding: $padding; }
@@ -151,8 +150,7 @@
     }
 
     &:focus {
-        @if $outline != null { outline: $outline; }
-        @if $outline-offset != null { outline-offset: $outline-offset; }
+        @if $outline-color != null { outline-color: $outline-color; }
         @if $border-radius != null { border-radius: $border-radius; }
     }
 }
