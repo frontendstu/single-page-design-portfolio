@@ -91,3 +91,68 @@
     flex-direction: $direction;
     gap: $gap;
 }
+
+// BUTTONS
+//
+// This mixin provides a flexible reusable pattern for styling buttons and 
+// interactive elements. It supports a range of optional parametres for layout, 
+// typography, colour, border, and hover states.
+//
+// The buttons mixin is designed to apply base styles as well as changes on 
+// `:hover` and `:focus-within`, allowing consistent appearance and behaviour 
+// across different button types and use cases.
+
+@mixin btn(
+    $gap: null,
+    $width: fit-content,
+    $padding: null,
+    $transition: var(--link-transition),
+    $border-radius: null,
+    $border-width: 1px,
+    $border-color: transparent,
+    $border-color-hover: null,
+    $border: $border-width solid $border-color,
+    $bg: null,
+    $bg-hover: null,
+    $color: null,
+    $color-hover: null,
+    $font-weight: null,
+    $font-size: null,
+    $font-family: null,
+    $letter-spacing: null,
+    $text-transform: null,
+    $text-decoration: none,
+    $text-decoration-hover: none,
+    $outline: null,
+    $outline-offset: null
+) {
+    @if $gap != null { gap: $gap; }
+    @if $padding != null { padding: $padding; }
+    @if $border-radius != null { border-radius: $border-radius; }
+    @if $bg != null { background-color: $bg; }
+    @if $color != null { color: $color; }
+    @if $font-weight != null { font-weight: $font-weight; }
+    @if $font-size != null { font-size: $font-size; }
+    @if $font-family != null { font-family: $font-family; }
+    @if $letter-spacing != null { letter-spacing: $letter-spacing; }
+    @if $text-transform != null { text-transform: $text-transform; }
+    display: flex;
+    width: $width;
+    transition: $transition;
+    border: $border;
+    text-decoration: $text-decoration;
+
+    &:hover,
+    &:focus-within {
+        @if $border-color-hover != null { border-color: $border-color-hover; }
+        @if $bg-hover != null { background-color: $bg-hover; }
+        @if $color-hover != null { color: $color-hover; }
+        text-decoration: $text-decoration-hover;
+    }
+
+    &:focus {
+        @if $outline != null { outline: $outline; }
+        @if $outline-offset != null { outline-offset: $outline-offset; }
+        @if $border-radius != null { border-radius: $border-radius; }
+    }
+}
