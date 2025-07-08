@@ -24,4 +24,12 @@
         $color-hover: var(--btn-clr-hover),
         $text-transform: var(--btn-case),
     );
+
+    &-pri {
+        @include mixin.btn(
+            $bg: var(--btn-pri-bg),
+            $bg-hover: var(--btn-pri-bg-hover),
+            $outline-color: var(--btn-pri-outline-clr)
+        );
+    }
 }
