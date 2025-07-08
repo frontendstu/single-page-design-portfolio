@@ -58,7 +58,8 @@
     --link-clr-hover: inherit;
     --link-decoration: none;
     --link-deoraction-hover: none;
-    --link-outline: 3px solid hsl(var(--clr-galactic-blue) / 0.75);
+    --link-outline-clr: var(--clr-galactic-blue);
+    --link-outline: 3px solid var(--link-outline-clr);
     --link-outline-offset: 2px;
     --link-outline-radius: 3px;
 
