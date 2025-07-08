@@ -34,4 +34,12 @@
             $outline-color: var(--btn-pri-outline-clr)
         );
     }
+
+    &-sec {
+        @include mixin.btn(
+            $bg: var(--btn-sec-bg),
+            $bg-hover: var(--btn-sec-bg-hover),
+            $outline-color: var(--btn-sec-outline-clr)
+        )
+    }
 }
