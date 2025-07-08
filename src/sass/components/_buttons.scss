@@ -15,3 +15,13 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.btn {
+    @include mixin.btn(
+        $padding: var(--btn-p),
+        $border-radius: var(--btn-radius),
+        $color: var(--btn-clr),
+        $color-hover: var(--btn-clr-hover),
+        $text-transform: var(--btn-case),
+    );
+}

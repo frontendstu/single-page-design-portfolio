@@ -73,6 +73,14 @@
     --container-max-w: 21.375rem; /* 342px */
     --container-px: 0.375rem;
 
+    /********** COMPONENTS
+
+    /* Buttons */
+    --btn-p: 0.75rem 2rem;
+    --btn-radius: 99vw;
+    --btn-clr: var(--clr-neutral-100);
+    --btn-clr-hover: var(--btn-clr);
+    --btn-case: capitalize;
 
     /********** MEDIA QUERIES */
     
