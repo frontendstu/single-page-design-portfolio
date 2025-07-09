@@ -1,0 +1,13 @@
+/**
+ * HEADER
+ *
+ * Defines the base styles for the site header, using Flexbox for layout and 
+ * alignment. Handles spacing, background, and stacking context, ensuring the 
+ * header remains fixed and hides on page scroll down and reappears on page 
+ * scroll up.
+ *
+ * Also includes styling for header logo, maintaining consistent sizing and 
+ * alignment across viewports.
+ */
+
+@use '../abstracts/mixins' as mixin;
