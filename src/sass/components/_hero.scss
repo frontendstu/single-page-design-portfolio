@@ -16,6 +16,13 @@
     margin: var(--hero-m);
     text-align: var(--hero-text-align);
 
+    &-content {
+        max-width: var(--hero-content-max-w);
+        margin: var(--hero-content-m);
+        color: var(--hero-content-clr);
+        font-size: var(--hero-content-fs);
+    }
+
     .heading {
         font-size: var(--hero-heading-fs);
         line-height: var(--hero-heading-leading);
