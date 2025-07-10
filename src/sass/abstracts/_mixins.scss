@@ -85,7 +85,7 @@
 // or component partials where Flexbox alignment and spacing are needed.
 
 @mixin flex($align: center, $justify: center, $direction: column, $gap: null) {
-    display: felx;
+    display: flex;
     align-items: $align;
     justify-content: $justify;
     flex-direction: $direction;
