@@ -108,6 +108,11 @@
     --hero-heading-fs: var(--fs-500);
     --hero-heading-leading: 1.2;
 
+    /* Cards */
+    --category-card-grid-gap: 1.5rem;
+    --category-card-grid-mt: 2rem;
+    --category-card-grid-max-w: 21.4375rem;
+
     /********** MEDIA QUERIES */
     
     /* 768px */
@@ -126,6 +131,8 @@
         --hero-m: 4rem auto;
         --hero-content-max-w: 35.8125rem;
         --hero-content-m: 1.6875rem auto 0;
+
+        --category-card-grid-max-w: 43.125rem;
     }
 
     /* 1280px */
@@ -140,5 +147,7 @@
         --hero-m: 4.125rem auto;
         --hero-content-max-w: 45.625rem; /* 730px */
         --hero-content-m: 1.4375rem auto 0;
+
+        --category-card-grid-max-w: 69.375rem;
     }
 }

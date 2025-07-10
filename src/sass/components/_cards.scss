@@ -10,3 +10,33 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+/**
+ * CATEGORY CARDS GRID
+ *
+ * The category cards grid defines the visual layout fir the category cards 
+ * grid and their respective child cards. The grid adapts across three 
+ * breakpoints:
+ *
+ * - Base (mobile) : Single column stack
+ * - Medium (48em) : Two-column layout with selected cards spanning full width
+ * - Large (80em)  : Four-column layout with custom column/row spans
+ */
+
+.category-cards-grid {
+    display: grid;
+    gap: var(--category-card-grid-gap);
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: var(--category-card-grid-mt);
+    margin-inline: auto;
+
+    @media(min-width: 48em) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    @media(min-width: 80em) {
+        grid-template-columns: repeat(6, 1fr);
+        max-width: var(--category-card-grid-max-w);
+    }
+}
