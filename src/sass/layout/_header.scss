@@ -11,3 +11,9 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.site-header .container {
+    @include mixin.flex($direction: row, $justify: space-between);
+
+    margin-top: var(--site-header-mt);
+}
