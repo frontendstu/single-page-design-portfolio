@@ -92,27 +92,6 @@
     gap: $gap;
 }
 
-// GRID
-//
-// The grid mixin sets up a flexible CSS Grid container with customisable 
-// columns, rows, gap, and alignment. Useful for creating reusable grid systems
-
-@mixin grid(
-    $cols: null,
-    $rows: null,
-    $gap: null,
-    $align: null,
-    $justify: null
-) {
-    @if $cols != null { columns: $cols; }
-    @if $rows != null { rows: $rows; }
-    @if $gap != null { gap: $gap; }
-    @if $align != null { align-items: $align; }
-    @if $justify != null { justify-content: $justify; }
-
-    display: grid;
-}
-
 // POSITION
 //
 // The position mixin sets the CSS `position` property and optional directional 
