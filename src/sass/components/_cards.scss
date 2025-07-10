@@ -40,3 +40,33 @@
         max-width: var(--category-card-grid-max-w);
     }
 }
+
+/**
+ * CATEGORY CARD
+ *
+ * Defines the global visual appearance of the category card
+ */
+
+.category-card {
+    padding: var(--category-card-p);
+    border-radius: var(--category-card-radius);
+    
+    .heading {
+        margin-top: var(--category-card-heading-mt);
+        color: var(--category-card-heading-clr);
+        font-size: var(--category-card-heading-fs);
+    }
+
+    img {
+        margin-left: auto;
+    }
+
+    a {
+        transition-duration: var(--category-card-transition-duration);
+        opacity: var(--category-card-opacity);
+
+        @include mixin.hover-focus {
+            opacity: var(--category-card-opacity-hover);
+        }
+    }
+}
