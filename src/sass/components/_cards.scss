@@ -26,7 +26,7 @@
 .category-cards-grid {
     display: grid;
     gap: var(--category-card-grid-gap);
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin-top: var(--category-card-grid-mt);
     margin-inline: auto;
 
@@ -107,7 +107,6 @@
     &-uiux,
     &-apps {
         grid-column: span 1;
-        width: 100%;
     }
 
     @media(min-width: 48em) {
