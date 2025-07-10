@@ -1,0 +1,12 @@
+/**
+ * CARDS
+ *
+ * The cards partial defines the styles of the site card components, in 
+ * particular the unique category cards grid system.
+ *
+ * Included styles:
+ * - category-grid  : Grid styles for the category grid system
+ * - category-cards : Base styles for the category cards
+ */
+
+@use '../abstracts/mixins' as mixin;
