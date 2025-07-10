@@ -70,3 +70,27 @@
         }
     }
 }
+
+/**
+ * 🏆 CATEGORY SPECIFIC STYLES
+ *
+ * Loops through each category to apply the class name of each category and 
+ * applies it's allocated background-color custom properties from `:root`
+ */
+
+.category {
+    $cat-clr: (
+        'graphic-design'    : var(--clr-galactic-blue),
+        'uiux'              : var(--clr-summer-yellow),
+        'apps'              : var(--clr-pink),
+        'illustrations'     : var(--clr-light-red),
+        'photography'       : var(--clr-cyan),
+        'motion-graphics'   : var(--clr-dark-purple)
+    );
+
+    @each $cat, $css-var in $cat-clr {
+        &-#{$cat} {
+            background-color: #{$css-var};
+        }
+    }
+}
