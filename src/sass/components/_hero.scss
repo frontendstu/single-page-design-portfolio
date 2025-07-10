@@ -10,3 +10,9 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.hero {
+    max-width: var(--hero-max-w);
+    margin: var(--hero-m);
+    text-align: var(--hero-text-align);
+}

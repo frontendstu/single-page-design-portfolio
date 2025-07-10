@@ -95,6 +95,11 @@
     --btn-sec-bg-hover: var(--clr-summer-yellow);
     --btn-sec-outline-clr: var(--btn-sec-bg-hover);
 
+    /* Hero */
+    --hero-max-w: 21.5rem; /* 344px */
+    --hero-m: 2rem auto;
+    --hero-text-align: center;
+
     /********** MEDIA QUERIES */
     
     /* 768px */
@@ -108,6 +113,9 @@
         --container-px: 0.5rem;
 
         --site-header-mt: 2.125rem;
+
+        --hero-max-w: 43.125rem; /* 690px */
+        --hero-m: 4rem auto;
     }
 
     /* 1280px */
@@ -117,5 +125,8 @@
 
         --container-max-w: 55.875rem; /* 894px */
         --container-px: 0.75rem;
+
+        --hero-max-w: 48rem; /* 750px */
+        --hero-m: 4.125rem auto;
     }
 }
