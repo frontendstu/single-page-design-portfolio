@@ -64,7 +64,7 @@
     --link-outline-radius: 3px;
 
     /* Heading */
-    --heading-fw: inherit;
+    --heading-fw: var(--fw-bold);
     --heading-ff: inherit;
 
     /********** LAYOUT */
