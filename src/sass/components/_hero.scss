@@ -15,4 +15,9 @@
     max-width: var(--hero-max-w);
     margin: var(--hero-m);
     text-align: var(--hero-text-align);
+
+    .heading {
+        font-size: var(--hero-heading-fs);
+        line-height: var(--hero-heading-leading);
+    }
 }
