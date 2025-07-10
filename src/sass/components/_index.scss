@@ -7,6 +7,7 @@
  *
  * Included partials
  * - _buttons.scss : Styles for primary and seconary buttons
+ * - _hero.scss    : Styles for site hero
  * - _cta.scss     : Call-to-action elements including layout styles
  * - _cards.scss   : Modular card components for displaying project categories  
  *                   in a grid layout
@@ -17,3 +18,4 @@
  */
 
 @forward 'buttons';
+@forward 'hero';
