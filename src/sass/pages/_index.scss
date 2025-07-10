@@ -1,0 +1,15 @@
+/**
+ * PAGES
+ *
+ * Page specific styles act as the entry point for scoped styles that apply 
+ * only to individual page templates or views. These styles are not intended to 
+ * be reused across the UI and should remain tightly coupled to their 
+ * respective pages for clarity and maintainability.
+ *
+ * Included partials:
+ * - _home.scss : Custom styles for the homepage layout
+ *
+ * This file should be imported last in the main stylesheet, after base, 
+ * layout, and component styles, to ensure page-level overrides take priority 
+ * where needed.
+ */
