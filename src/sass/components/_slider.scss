@@ -1,0 +1,16 @@
+/**
+ * SLIDER
+ *
+ * Contains layout and interaction styles for the image slider component. Built 
+ * using Flexbox, the slider displays three visible slides at a time and 
+ * supports next/previous navigation using JavaScript.
+ *
+ * Styles include the track, individual slides, and navigation buttons. 
+ * Responsive behaviour, transitions, and accessibility considerations can be 
+ * extanded as needed.
+ *
+ * This slider is lightweight and designed for reusability across multiple 
+ * sections of the site.
+ */
+
+@use '../abstracts/mixins' as mixin;
