@@ -8,3 +8,27 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.profile {
+    @include mixin.flex($direction: column, $align: center);
+
+    padding-block: var(--home-profile-py);
+    color: var(--home-profile-clr);
+    text-align: var(--home-profile-text-align);
+
+    img {
+        max-width: var(--home-profile-img-max-w);
+        margin-bottom: var(--home-profile-mb);
+        margin-inline: auto;
+    }
+
+    &-content {
+        @include mixin.flex($gap: var(--home-profile-content-gap));
+
+        .heading {
+            color: var(--home-profile-content-heading-clr);
+            font-size: var(--home-profile-content-heading-fs);
+            line-height: var(--home-profile-content-heading-leading);
+        }
+    }
+}

@@ -122,6 +122,20 @@
     --category-card-heading-clr: var(--clr-neutral-100);
     --category-card-heading-fs: var(--fs-300);
 
+    /********** PAGES */
+
+    /* Home */
+    --home-profile-gap: 1.5rem;
+    --home-profile-py: 6.25rem;
+    --home-profile-clr: var(--clr-neutral-500);
+    --home-profile-text-align: center;
+    --home-profile-img-max-w: 18.75rem;
+    --home-profile-mb: 1.25rem;
+    --home-profile-content-gap: 1.5rem;
+    --home-profile-content-heading-clr: var(--clr-neutral-900);
+    --home-profile-content-heading-fs: var(--fs-400);
+    --home-profile-content-heading-leading: 1.2;
+
     /********** MEDIA QUERIES */
     
     /* 768px */
