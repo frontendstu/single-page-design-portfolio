@@ -7,3 +7,20 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+/**
+ * Fade In Effect
+ *
+ * The `.fade-in` utility class applies an initial opacity of 0 to elements, 
+ * making them invisible. When the `.fade-in-active` class is added, the 
+ * opacity transitions to 1, causing the element to fade in smoothly over 600ms.
+ */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 600ms ease-in;
+
+    &__active {
+        opacity: 1;
+    }
+}
