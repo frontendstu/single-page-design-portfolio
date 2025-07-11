@@ -52,3 +52,12 @@
         }
     }
 }
+
+.work {
+    padding-bottom: var(--work-pb);
+    text-align: var(--work-text-align);
+
+    .heading {
+        font-size: var(--work-heading-fs);
+    }
+}
