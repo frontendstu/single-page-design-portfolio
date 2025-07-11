@@ -126,6 +126,7 @@
 
     /* Home */
     --home-profile-gap: 1.5rem;
+    --home-profile-max-w: 100%;
     --home-profile-py: 6.25rem;
     --home-profile-clr: var(--clr-neutral-500);
     --home-profile-text-align: center;
@@ -176,5 +177,10 @@
         --hero-content-m: 1.4375rem auto 0;
 
         --category-card-grid-max-w: 69.375rem;
+
+        --home-profile-gap: 7.8125rem;
+        --home-profile-max-w: 69.375rem;
+        --home-profile-img-translate: unset;
+        --home-profile-img-max-w: 27.8125rem;
     }
 }

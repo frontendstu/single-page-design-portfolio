@@ -10,7 +10,7 @@
 @use '../abstracts/mixins' as mixin;
 
 .profile {
-    @include mixin.flex($direction: column, $align: center);
+    @include mixin.flex($direction: column, $align: center, $gap: var(--home-profile-gap));
 
     padding-block: var(--home-profile-py);
     color: var(--home-profile-clr);
@@ -40,6 +40,14 @@
         }
 
         .btn {
+            margin-right: auto;
+        }
+    }
+
+    @media(min-width: 80em) {
+        max-width: 69.375rem;
+
+        img {
             margin-right: auto;
         }
     }
