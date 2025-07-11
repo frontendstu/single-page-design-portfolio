@@ -31,4 +31,16 @@
             line-height: var(--home-profile-content-heading-leading);
         }
     }
+
+    @media(min-width: 48em) {
+        flex-direction: row;
+
+        img {
+            transform: var(--home-profile-img-translate);
+        }
+
+        .btn {
+            margin-right: auto;
+        }
+    }
 }
