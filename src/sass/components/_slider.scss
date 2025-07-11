@@ -14,3 +14,47 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slider-slide {
+  box-sizing: border-box;
+  padding-inline: 1rem;
+}
+
+.slider-nav {
+    @include mixin.flex($direction: row, $gap: 1rem);
+
+    margin-top: 2rem;
+}
+
+/* Default for large screens (3 slides visible) */
+@media (min-width: 1024px) {
+  .slider-slide {
+    min-width: 33.33%;  /* 3 slides visible */
+  }
+}
+
+/* For medium-sized screens (2 slides visible) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .slider-slide {
+    min-width: 50%;  /* 2 slides visible */
+  }
+}
+
+/* For small screens (1 slide visible) */
+@media (max-width: 767px) {
+  .slider-slide {
+    min-width: 100%;  /* 1 slide visible */
+  }
+}
+
