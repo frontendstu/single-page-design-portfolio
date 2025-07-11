@@ -27,6 +27,8 @@
         $text-transform: var(--btn-case),
     );
 
+    cursor: pointer;
+
     &-pri {
         @include mixin.btn(
             $bg: var(--btn-pri-bg),
