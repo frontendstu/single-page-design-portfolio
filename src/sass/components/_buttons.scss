@@ -44,4 +44,10 @@
             $outline-color: var(--btn-sec-outline-clr)
         )
     }
+
+    &-ctrl {
+        @include mixin.btn(
+            $padding: 1rem
+        );
+    }
 }
