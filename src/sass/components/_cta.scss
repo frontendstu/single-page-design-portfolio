@@ -1,0 +1,15 @@
+/**
+ * CALL TO ACTION
+ *
+ * Contains the styles for the call to action. This includes the layout, 
+ * positioning, alignment, etc. The call to action component is designed to 
+ * draw the user's attention and typically includes a headline, supporting 
+ * text, and a primary button.
+ *
+ * CTA's may appear in multiple locations, such as the homepage, inner pages, 
+ * or at the end of content sections. Styles are built to be flexible and 
+ * reusable, with support for responsive behaviour and variations in 
+ * presentation.
+ */
+
+@use '../abstracts/mixins' as mixin;
