@@ -13,3 +13,42 @@
  */
 
 @use '../abstracts/mixins' as mixin;
+
+.cta {
+    max-width: var(--cta-max-w);
+    padding: var(--cta-p);
+    margin-inline: auto;
+    border-radius: var(--cta-radius);
+    background-color: var(--cta-bg);
+    color: var(--cta-clr);
+    text-align: var(--cta-text-align);
+    
+    .heading {
+        font-size: var(--cta-heading-fs);
+    }
+
+    &-content {
+        @include mixin.flex($gap: var(--cta-content-gap));
+
+        max-width: var(--cta-content-max-w);
+        margin-inline: auto;
+
+    }
+    
+    @media(min-width: 80em) {
+        
+        &-content {
+            display: grid;
+            grid-template-areas: 
+                "text button"
+                "text button";
+            grid-area: text;
+            text-align: left;
+
+            .btn {
+                grid-area: button;
+                justify-self: end;
+            }
+        }
+    }
+}

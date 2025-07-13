@@ -130,6 +130,19 @@
     --slider-nav-gap: 1rem;
     --slider-nav-mt: 2rem;
 
+    /* CTA */
+    --cta-max-w: 21.5rem;
+    --cta-p: 3rem 1.5rem;
+    --cta-radius: 10px;
+    --cta-bg: var(--clr-neutral-900);
+    --cta-clr: var(--clr-neutral-100);
+    --cta-text-align: center;
+
+    --cta-content-max-w: 18.5rem;
+    --cta-content-gap: 1.5rem;
+    
+    --cta-heading-fs: var(--fs-400);
+    
     /********** PAGES */
 
     /* Home */
@@ -172,6 +185,9 @@
 
         --slider-pb: 3.5rem;
 
+        --cta-max-w: 43.125rem;
+        --cta-content-max-w: 33.75rem;
+
         --home-profile-text-align: left;
         --home-profile-img-max-w: 22.75rem;
         --home-profile-img-translate: translateX(-5rem);
@@ -191,6 +207,9 @@
         --hero-content-m: 1.4375rem auto 0;
 
         --category-card-grid-max-w: 69.375rem;
+
+        --cta-max-w: 69.375rem;
+        --cta-content-max-w: 49rem;
 
         --home-profile-gap: 7.8125rem;
         --home-profile-max-w: 69.375rem;
