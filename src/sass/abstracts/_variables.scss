@@ -122,6 +122,14 @@
     --category-card-heading-clr: var(--clr-neutral-100);
     --category-card-heading-fs: var(--fs-300);
 
+    /* Slider */
+    --slider-pb: 2rem;
+    --slider-track-transition: transform 300ms ease;
+    --slider-slide-py: 1rem;
+    --slider-slide-img-radius: 8px;
+    --slider-nav-gap: 1rem;
+    --slider-nav-mt: 2rem;
+
     /********** PAGES */
 
     /* Home */
@@ -161,6 +169,8 @@
         --hero-content-m: 1.6875rem auto 0;
 
         --category-card-grid-max-w: 43.125rem;
+
+        --slider-pb: 3.5rem;
 
         --home-profile-text-align: left;
         --home-profile-img-max-w: 22.75rem;
