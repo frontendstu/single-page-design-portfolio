@@ -75,6 +75,11 @@
 
     /* Header */
     --site-header-mt: 1rem;
+    --site-header-max-w: 21.4375rem;
+    --site-header-branding-img-size: 3rem;
+
+    /* Footer */
+    --site-footer-my: 2.5rem;
     
     /********** COMPONENTS
 
@@ -172,6 +177,11 @@
         --container-px: 0.5rem;
 
         --site-header-mt: 2.125rem;
+        --site-header-max-w: 43.0625rem;
+        --site-header-branding-img-size: 4rem;
+
+        --site-footer-my: 3.5rem;
+
 
         --hero-max-w: 43.125rem; /* 690px */
         --hero-m: 4rem auto;
@@ -198,6 +208,8 @@
 
         --container-max-w: 55.875rem; /* 894px */
         --container-px: 0.75rem;
+
+        --site-header-max-w: 69.375rem;
 
         --hero-max-w: 48rem; /* 750px */
         --hero-m: 4.125rem auto;
