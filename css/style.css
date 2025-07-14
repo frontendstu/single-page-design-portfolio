@@ -287,7 +287,7 @@ ol[role=list] {
 /* PLUS JAKARTA SANS               */
 /* ------------------------------- */
 @font-face {
-  src: url(../assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf);
+  src: url(assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf);
   font-weight: 500 800;
   font-family: "Plus Jakarta Sans";
   font-style: normal;
