@@ -1,0 +1,928 @@
+@charset "UTF-8";
+/**
+ * SINGLE PAGE DESIGN PORTFOLIO
+ *
+ * The main stylesheet for the solution to the Frontend Mentor "Single Page 
+ * Design Portfolio" challenge.
+ *
+ * Author: Stu Cowley (07/07/2025)
+ * License: LICENSE
+ * 
+ * Feel free to use or improve anything you see in this project. 
+ */
+/**
+ * VARIABLES
+ *
+ * Defines project-wide CSS custom properties using the `:root` selector. These 
+ * variables serve as design tokens for consistent theming across the UI, 
+ * including colours, spacing, typography, etc.
+ */
+:root {
+  /********** COLOURS */
+  /**
+   * Why the duplicate colour custom properies?
+   *
+   * I am using the raw HSL values along with the hsl(...) to ensure that an 
+   * alpha value can be used in the scenario of reduced opacity for an 
+   * element.
+   */
+  --clr-neutral-100: hsl(28 100% 97%);
+  --clr-neutral-500: hsl(30 5% 45%);
+  --clr-neutral-900: hsl(0 0% 1%);
+  --clr-galactic-blue: hsl(252 66% 62%);
+  --clr-summer-yellow: hsl(28 89% 67%);
+  --clr-pink: hsl(0 78% 79%);
+  --clr-light-red: hsl(7 77% 66%);
+  --clr-cyan: hsl(172 46% 57%);
+  --clr-dark-purple: hsl(314 45% 23%);
+  /********** FONTS & TYPOGRAPHY */
+  --fw-med: 500;
+  --fw-bold: 700;
+  --fs-100: 0.875rem; /* 14px */
+  --fs-200: 1rem; /* 16px */
+  --fs-300: 1.5rem; /* 24px */
+  --fs-400: 1.625rem; /* 26px */
+  --fs-500: 2.25rem; /* 36px */
+  --ff-pri: "Plus Jakarta Sans", sans-serif;
+  --leading-100: 26px;
+  --leading-200: 28px;
+  /********** BOILERPLATE */
+  /* Body */
+  --body-bg: var(--clr-neutral-100-hsl);
+  --body-clr: var(--clr-neutral-500-hsl);
+  --body-font: var(--fw-med) var(--fs-200) var(--ff-pri);
+  --body-leading: var(--leading-100);
+  /* Links */
+  --link-transition: 150ms ease-in-out;
+  --link-clr: inherit;
+  --link-clr-hover: inherit;
+  --link-decoration: none;
+  --link-deoraction-hover: none;
+  --link-outline-clr: var(--clr-galactic-blue);
+  --link-outline: 3px solid var(--link-outline-clr);
+  --link-outline-offset: 3px;
+  --link-outline-radius: 3px;
+  /* Heading */
+  --heading-fw: var(--fw-bold);
+  --heading-ff: inherit;
+  /********** LAYOUT */
+  /* Container */
+  --container-max-w: 21.375rem; /* 342px */
+  --container-px: 0.375rem;
+  /* Header */
+  --site-header-mt: 1rem;
+  --site-header-max-w: 21.4375rem;
+  --site-header-branding-img-size: 3rem;
+  /* Footer */
+  --site-footer-my: 2.5rem;
+  --site-attribution-max-w: 22rem;
+  --site-attribution-mb: 2rem;
+  --site-attribution-clr: var(--clr-neutral-500);
+  --site-attribution-fs: 0.800rem;
+  --site-attribution-text-align: center;
+  --site-attribution-link-border-b: 1px dotted var(--clr-neutral-500);
+  --site-attribution-link-opacity-hover: 0.5;
+  /********** COMPONENTS
+
+  /* Buttons */
+  --btn-p: 0.75rem 2rem;
+  --btn-radius: 99vw;
+  --btn-clr: var(--clr-neutral-100);
+  --btn-clr-hover: var(--btn-clr);
+  --btn-fw: var(--fw-bold);
+  --btn-fs: var(--fs-100);
+  --btn-case: capitalize;
+  --btn-pri-bg: var(--clr-neutral-900);
+  --btn-pri-bg-hover: var(--clr-galactic-blue);
+  --btn-pri-outline-clr: var(--btn-pri-bg-hover);
+  --btn-sec-bg: var(--clr-light-red);
+  --btn-sec-bg-hover: var(--clr-summer-yellow);
+  --btn-sec-outline-clr: var(--btn-sec-bg-hover);
+  /* Hero */
+  --hero-max-w: 21.5rem; /* 344px */
+  --hero-m: 2rem auto;
+  --hero-text-align: center;
+  --hero-content-max-w: 17.8125rem;
+  --hero-content-m: 1rem auto 0;
+  --hero-content-clr: var(--clr-neutral-500);
+  --hero-content-fs: var(--fs-200);
+  --hero-heading-fs: var(--fs-500);
+  --hero-heading-leading: 1.2;
+  /* Cards */
+  --category-card-grid-gap: 1.5rem;
+  --category-card-grid-mt: 2rem;
+  --category-card-grid-max-w: 21.4375rem;
+  --category-card-p: 1.5rem;
+  --category-card-radius: 8px;
+  --category-card-transition-duration: 250ms;
+  --category-card-opacity: 1;
+  --category-card-opacity-hover: 0.65;
+  --category-card-heading-mt: 2.5rem;
+  --category-card-heading-clr: var(--clr-neutral-100);
+  --category-card-heading-fs: var(--fs-300);
+  /* Slider */
+  --slider-pb: 2rem;
+  --slider-track-transition: transform 300ms ease;
+  --slider-slide-py: 1rem;
+  --slider-slide-img-radius: 8px;
+  --slider-nav-gap: 1rem;
+  --slider-nav-mt: 2rem;
+  /* CTA */
+  --cta-max-width: 21.4375rem;
+  --cta-p: 3rem 1.5rem;
+  --cta-radius: 10px;
+  --cta-text-align: center;
+  --cta-content-spacing: 1.5rem;
+  --cta-heading-fs: var(--fs-400);
+  /********** PAGES */
+  /* Home */
+  --home-profile-gap: 1.5rem;
+  --home-profile-max-w: 100%;
+  --home-profile-py: 6.25rem;
+  --home-profile-clr: var(--clr-neutral-500);
+  --home-profile-text-align: center;
+  --home-profile-img-max-w: 18.75rem;
+  --home-profile-mb: 1.25rem;
+  --home-profile-content-gap: 1.5rem;
+  --home-profile-content-heading-clr: var(--clr-neutral-900);
+  --home-profile-content-heading-fs: var(--fs-400);
+  --home-profile-content-heading-leading: 1.2;
+  --work-pb: 6.25rem;
+  --work-text-align: center;
+  --work-heading-fs: var(--fs-300);
+  /********** MEDIA QUERIES */
+  /* 768px */
+  /* 1280px */
+}
+@media (min-width: 48em) {
+  :root {
+    --fs-100: 1rem; /* 16px */
+    --fs-200: 1.125rem; /* 18px */
+    --fs-400: 2rem; /* 32px */
+    --fs-500: 2.75rem; /* 44px */
+    --container-max-w: 43.125rem; /* 690px */
+    --container-px: 0.5rem;
+    --site-header-mt: 2.125rem;
+    --site-header-max-w: 43.0625rem;
+    --site-header-branding-img-size: 4rem;
+    --site-footer-my: 3.5rem;
+    --hero-max-w: 43.125rem; /* 690px */
+    --hero-m: 4rem auto;
+    --hero-content-max-w: 35.8125rem;
+    --hero-content-m: 1.6875rem auto 0;
+    --category-card-grid-max-w: 43.125rem;
+    --slider-pb: 3.5rem;
+    --cta-max-width: 43.125rem;
+    --cta-p: 4rem 4.6875rem;
+    --cta-content-spacing: 1.625rem;
+    --home-profile-text-align: left;
+    --home-profile-img-max-w: 22.75rem;
+    --home-profile-img-translate: translateX(-5rem);
+  }
+}
+@media (min-width: 80em) {
+  :root {
+    --fs-400: 2.5rem; /* 40px */
+    --fs-500: 3.5rem; /* 56px */
+    --container-max-w: 55.875rem; /* 894px */
+    --container-px: 0.75rem;
+    --site-header-max-w: 69.375rem;
+    --hero-max-w: 48rem; /* 750px */
+    --hero-m: 4.125rem auto;
+    --hero-content-max-w: 45.625rem; /* 730px */
+    --hero-content-m: 1.4375rem auto 0;
+    --category-card-grid-max-w: 69.375rem;
+    --cta-max-width: 69.375rem;
+    --cta-p: 5rem 4.0625rem;
+    --cta-text-align: left;
+    --home-profile-gap: 7.8125rem;
+    --home-profile-max-w: 69.375rem;
+    --home-profile-img-translate: unset;
+    --home-profile-img-max-w: 27.8125rem;
+  }
+}
+
+/** 
+ * GLOBALS
+ *
+ * Globals styles apply universally across the project. These styles establish 
+ * a consistent baseline including foundational elements such as resets, 
+ * boilerplate structure, and font declarations.
+ *
+ * Included partials
+ * - _reset.scss        : Resets browser default styles for consistency
+ * - _fonts.scss        : Custom font-face declarations
+ * - _boilerplate.scss  : Base HTML elements, body styles and default typography
+ *
+ * These styles are loaded early in the cascade and should not contain 
+ * component-specific rules. They form the groundwork for the reset of the 
+ * design system.
+ */
+/**
+ * RESET
+ *
+ * A minimal CSS reset to establish a consistent and predicable baseline across 
+ * browsers. This reset removes default spacing, normalises box sizing and 
+ * ensures media and structual elements behave consistently.
+ *
+ * Included resets:
+ * - Universal box-sizing set to border-box for layout consistency
+ * - Margin, padding and font inheritance reset on all elements
+ * - Sets `color-scheme: light` on html to support system themes
+ * - Ensures body takes up full viewport height
+ * - Media elements (img, video, svg, picture) are block-level and responsive
+ * - Removes default list styles from <ul> and <ol> elements
+ *
+ * This reset is intentionally lightwight and designed to compliment 
+ * boilerplate and component styles without having to introduce heavy-handed 
+ * overrides.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/**
+ * FONTS
+ *
+ * The fonts partial handles custom fonts imports for the project using the 
+ * `font-face` mixin. It ensures that fonts are loaded efficiently and 
+ * consistently across the UI.
+ *
+ * Font files are imported using `font-display: swap` for performance, and 
+ * font-weights/styles are declared explicity for clarity and control.
+ *
+ * This file is imported early in the global layer to ensure fonts are 
+ * available before layout and component styles are applied.
+ */
+/* ------------------------------- */
+/* PLUS JAKARTA SANS               */
+/* ------------------------------- */
+@font-face {
+  src: url(../assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf);
+  font-weight: 500 800;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+}
+/**
+ * BOILERPLATE
+ *
+ * This partial defines foundational element styles that apply globally across 
+ * the project. These styles establish consistent visual defaults for key HTML 
+ * elements using design tokens and utility mixins.
+ *
+ * Included styles
+ * - `body`     : Applied base background, text colour, font, and line-height
+ * - `a`        : Defines link colour, decoration, transitions, and 
+ *                accessibility enhancements via hover, focus and outline mixins
+ * - `.heading` : Utility class for consistent heading font weight and family, 
+ *                font size and colour is defined when required
+ * - `.sr-only` : Accessibility utility for visually hiding elements while  
+ *                keeping them accessible to screen
+ *
+ * These styles are intended to complement the reset and abstract layers, 
+ * providing a clean, accessible and token-driven baseline for the UI.
+ */
+/* --------------------------------------------------------------------
+ * Body
+ * -------------------------------------------------------------------- */
+body {
+  background-color: var(--body-bg);
+  color: var(--body-clr);
+  font: var(--body-font);
+  line-height: var(--body-leading);
+}
+
+/* --------------------------------------------------------------------
+ * Links
+ * -------------------------------------------------------------------- */
+a {
+  transition: var(--link-transition);
+  color: var(--link-clr);
+  text-decoration: var(--link-decoration);
+}
+a:hover {
+  color: var(--link-clr-hover);
+  text-decoration: none;
+}
+a:focus-visible, a:focus-within {
+  transition: none;
+  outline: var(--link-outline);
+  outline-offset: var(--link-outline-offset);
+  border-radius: var(--link-outline-radius);
+}
+
+/* --------------------------------------------------------------------
+ * Heading
+ *
+ * The global styles for `.heading` only include the font-weight and 
+ * font-family properties. Heading styles (font-size, color, etc need 
+ * to be specically declared where required.
+ * ------------------------------------------------------------------- */
+.heading {
+  font-weight: var(--heading-fw);
+  font-family: var(--heading-ff);
+}
+
+/* --------------------------------------------------------------------
+ * Accessibility
+ * -------------------------------------------------------------------- */
+.sr-only {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+
+/**
+ * UTILITIES
+ *
+ * Utilities contain partials that contain utility classes that provide quick, 
+ * low-level styles for various UI effects, spacing adjustments, and other 
+ * commonly used patterns. These classes are designed to be applied directly to 
+ * elements, provising flexibility and consistency throughout the project.
+ *
+ * Utility classes are intended to be non-intrusive, reusable, and easy to 
+ * apply to individual elements without modyifying the core layout or component 
+ * styles
+ */
+/**
+ * EFFECTS
+ *
+ * The effects utility partial contains reusable utility classes for adding 
+ * basic visual effects such as fade-in, transitions, and other animations. 
+ * These classes can be applied to elements to enhance the user experience.
+ */
+/**
+ * Fade In Effect
+ *
+ * The `.fade-in` utility class applies an initial opacity of 0 to elements, 
+ * making them invisible. When the `.fade-in-active` class is added, the 
+ * opacity transitions to 1, causing the element to fade in smoothly over 600ms.
+ */
+.fade-in {
+  opacity: 0;
+  transition: opacity 600ms ease-in;
+}
+.fade-in__active {
+  opacity: 1;
+}
+
+/**
+ * LAYOUT
+ *
+ * Layout styles aggregates all layout-level partials that define the structual 
+ * scaffolding of the UI. These styles control the positioning and flow of 
+ * major page regions without applying component-specific design.
+ *
+ * Included partials:
+ * - _header-footer.scss    : Global site header and footer layout and visual 
+ *                              styles 
+ * - _container.scss        : Wrapper and container utilities for consistent 
+ *                              spacing
+ *
+ * Layouts styles should focus on structure and region-specific design not 
+ * reusable components. They are intended to support and frame the content 
+ * within the page.
+ *
+ * This file should be imported after global styles and before components.
+ */
+/**
+ * CONTAINER
+ *
+ * The container partial defines the container to constrain content width and 
+ * apply consistent horizontal padding across the site. The container class 
+ * help maintain readable line lengths and align content within the design grid.
+ *
+ * Included styles:
+ * - container.scss : Container wrapper with max-width and padding-inline
+ *
+ * The container styles remain structual and avoid component-specific design. 
+ * The container class is intended to be used across layouts and components to 
+ * ensure consistent spacing and alignment.
+ */
+.container {
+  max-width: var(--container-max-w);
+  padding-inline: var(--padding-px);
+  margin-inline: auto;
+}
+
+/**
+ * HEADER/FOOTER
+ *
+ * Defines the base styles for the site header and footer. Due to the repeating 
+ * layout and styles, a single header/footer partial was created to save 
+ * on bloating the Sass folder.
+ *
+ * Contains the base styles for both the header and footer, along with the site 
+ * attribution (author, copyright, etc). The header and footer was positioned 
+ * using flexbox. The site branding image was sized using the size mixin.
+ */
+.site-header .container,
+.site-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: var(--site-header-max-w);
+}
+.site-header .container img,
+.site-footer .container img {
+  width: var(--site-header-branding-img-size);
+  height: auto;
+}
+
+.site-header .container {
+  margin-top: var(--site-header-mt);
+}
+
+.site-footer .container {
+  margin-block: var(--site-footer-my);
+}
+
+.attribution {
+  max-width: var(--site-attribution-max-w);
+  margin-inline: auto;
+  margin-bottom: var(--site-attribution-mb);
+  color: var(--site-attribution-clr);
+  font-size: var(--site-attribution-fs);
+  text-align: var(--site-attribution-text-align);
+}
+.attribution a {
+  border-bottom: var(--site-attribution-link-border-b);
+}
+.attribution a:hover, .attribution a:focus-visible {
+  opacity: var(--site-attribution-link-opacity-hover);
+  outline: none;
+}
+
+/**
+ * COMPONENTS
+ *
+ * Component styles serve as the entry point for all component-level styles in 
+ * the UI. Each component partial should be scoped, modular, and 
+ * self-contained, promoting reusability and maintainability across the project.
+ *
+ * Included partials
+ * - _buttons.scss : Styles for primary and seconary buttons
+ * - _hero.scss    : Styles for site hero
+ * - _cta.scss     : Call-to-action elements including layout styles
+ * - _cards.scss   : Modular card components for displaying project categories  
+ *                   in a grid layout
+ * - _slider.scss  : Styles for the project interactive slider
+ *
+ * This file should be imported after global and layout styles to ensure 
+ * components can override foundational rules where needed.
+ */
+/**
+ * BUTTONS
+ *
+ * This partial defines the base styles and variants for button components. 
+ * Buttons should be styled consistently across the UI, with clear visual 
+ * hierarchy and accessible focus states.
+ *
+ * Included styles:
+ * - `.btn`     : Base button elements with reset and shared styles
+ * - `.btn-pri` : Primary action button styling
+ * - `.btn-sec` : Secondary action button for a less proinent style
+ * - `.btn-icn` : Buttons that only use an icon, i.e. slide prev/next slide
+ *
+ * This partial should be imported through the components index
+ */
+.btn {
+  padding: var(--btn-p);
+  border-radius: var(--btn-radius);
+  color: var(--btn-clr);
+  font-weight: var(--btn-fw);
+  font-size: var(--btn-fs);
+  text-transform: var(--btn-case);
+  display: flex;
+  width: fit-content;
+  transition: var(--link-transition);
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover, .btn:focus-within {
+  color: var(--btn-clr-hover);
+  text-decoration: none;
+}
+.btn:focus {
+  border-radius: var(--btn-radius);
+}
+.btn-pri {
+  padding: var(--btn-p);
+  border-radius: var(--btn-radius);
+  background-color: var(--btn-pri-bg);
+  color: var(--btn-clr);
+  font-weight: var(--btn-fw);
+  font-size: var(--btn-fs);
+  text-transform: var(--btn-case);
+  display: flex;
+  width: fit-content;
+  transition: var(--link-transition);
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.btn-pri:hover, .btn-pri:focus-within {
+  background-color: var(--btn-pri-bg-hover);
+  color: var(--btn-clr-hover);
+  text-decoration: none;
+}
+.btn-pri:focus {
+  outline-color: var(--btn-pri-outline-clr);
+  border-radius: var(--btn-radius);
+}
+.btn-sec {
+  padding: var(--btn-p);
+  border-radius: var(--btn-radius);
+  background-color: var(--btn-sec-bg);
+  color: var(--btn-clr);
+  font-weight: var(--btn-fw);
+  font-size: var(--btn-fs);
+  text-transform: var(--btn-case);
+  display: flex;
+  width: fit-content;
+  transition: var(--link-transition);
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.btn-sec:hover, .btn-sec:focus-within {
+  background-color: var(--btn-sec-bg-hover);
+  color: var(--btn-clr-hover);
+  text-decoration: none;
+}
+.btn-sec:focus {
+  outline-color: var(--btn-sec-outline-clr);
+  border-radius: var(--btn-radius);
+}
+.btn-ctrl {
+  padding: 1rem;
+  border-radius: var(--btn-radius);
+  color: var(--btn-clr);
+  font-weight: var(--btn-fw);
+  font-size: var(--btn-fs);
+  text-transform: var(--btn-case);
+  display: flex;
+  width: fit-content;
+  transition: var(--link-transition);
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.btn-ctrl:hover, .btn-ctrl:focus-within {
+  color: var(--btn-clr-hover);
+  text-decoration: none;
+}
+.btn-ctrl:focus {
+  border-radius: var(--btn-radius);
+}
+
+/**
+ * HERO
+ *
+ * The hero partial defines the styles of the site's hero. This is the section 
+ * of content that a site visitor will be presented with first up, so make it 
+ * count.
+ * 
+ * Included styles:
+ * - hero : Base styles for the hero 
+ */
+.hero {
+  max-width: var(--hero-max-w);
+  margin: var(--hero-m);
+  text-align: var(--hero-text-align);
+}
+.hero-content {
+  max-width: var(--hero-content-max-w);
+  margin: var(--hero-content-m);
+  color: var(--hero-content-clr);
+  font-size: var(--hero-content-fs);
+}
+.hero .heading {
+  font-size: var(--hero-heading-fs);
+  line-height: var(--hero-heading-leading);
+}
+
+/**
+ * CARDS
+ *
+ * The cards partial defines the styles of the site card components, in 
+ * particular the unique category cards grid system.
+ *
+ * Included styles:
+ * - category-grid  : Grid styles for the category grid system
+ * - category-cards : Base styles for the category cards
+ */
+/**
+ * CATEGORY CARDS GRID
+ *
+ * The category cards grid defines the visual layout fir the category cards 
+ * grid and their respective child cards. The grid adapts across three 
+ * breakpoints:
+ *
+ * - Base (mobile) : Single column stack
+ * - Medium (48em) : Two-column layout with selected cards spanning full width
+ * - Large (80em)  : Four-column layout with custom column/row spans
+ */
+.category-cards-grid {
+  display: grid;
+  gap: var(--category-card-grid-gap);
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: var(--category-card-grid-mt);
+  margin-inline: auto;
+}
+@media (min-width: 48em) {
+  .category-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 80em) {
+  .category-cards-grid {
+    grid-template-columns: repeat(6, 1fr);
+    max-width: var(--category-card-grid-max-w);
+  }
+}
+
+/**
+ * CATEGORY CARD
+ *
+ * Defines the global visual appearance of the category card
+ */
+.category-card {
+  padding: var(--category-card-p);
+  border-radius: var(--category-card-radius);
+}
+.category-card .heading {
+  margin-top: var(--category-card-heading-mt);
+  color: var(--category-card-heading-clr);
+  font-size: var(--category-card-heading-fs);
+}
+.category-card img {
+  margin-left: auto;
+}
+.category-card a {
+  transition-duration: var(--category-card-transition-duration);
+  opacity: var(--category-card-opacity);
+}
+.category-card a:hover, .category-card a:focus-visible {
+  opacity: var(--category-card-opacity-hover);
+}
+
+/**
+ * 🏆 CATEGORY SPECIFIC STYLES
+ *
+ * Loops through each category to apply the class name of each category and 
+ * applies it's allocated background-color custom properties from `:root`
+ */
+.category {
+  width: 100%;
+  min-width: 0;
+}
+.category-graphic-design {
+  background-color: var(--clr-galactic-blue);
+}
+.category-uiux {
+  background-color: var(--clr-summer-yellow);
+}
+.category-apps {
+  background-color: var(--clr-pink);
+}
+.category-illustrations {
+  background-color: var(--clr-light-red);
+}
+.category-photography {
+  background-color: var(--clr-cyan);
+}
+.category-motion-graphics {
+  background-color: var(--clr-dark-purple);
+}
+.category-graphic-design, .category-illustrations, .category-photography, .category-motion-graphics {
+  grid-column: span 2;
+}
+.category-uiux, .category-apps {
+  grid-column: span 1;
+}
+@media (min-width: 48em) {
+  .category-graphic-design {
+    grid-row: span 2;
+  }
+}
+@media (min-width: 80em) {
+  .category-photography {
+    grid-column: 5/7;
+    grid-row: 1;
+  }
+}
+
+/**
+ * SLIDER
+ *
+ * Contains layout and interaction styles for the image slider component. Built 
+ * using Flexbox, the slider displays three visible slides at a time and 
+ * supports next/previous navigation using JavaScript.
+ *
+ * Styles include the track, individual slides, and navigation buttons. 
+ * Responsive behaviour, transitions, and accessibility considerations can be 
+ * extanded as needed.
+ *
+ * This slider is lightweight and designed for reusability across multiple 
+ * sections of the site.
+ */
+.slider {
+  position: relative;
+  width: 100%;
+  padding-block: var(--slider-pb);
+  overflow: hidden;
+}
+.slider-track {
+  display: flex;
+  transition: var(--slider-track-transition);
+}
+.slider-slide {
+  min-width: 100%; /* 1 slide visible */
+  box-sizing: border-box;
+  padding-inline: var(--slider-slide-py);
+}
+.slider-slide img {
+  border-radius: var(--slider-slide-img-radius);
+}
+@media (min-width: 48em) {
+  .slider-slide {
+    min-width: 50%; /* 2 slides visible */
+  }
+}
+@media (min-width: 80em) {
+  .slider-slide {
+    min-width: 33.33%;
+  }
+}
+.slider-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: var(--slider-nav-gap);
+  margin-top: var(--slider-nav-mt);
+}
+
+/**
+ * CALL TO ACTION
+ *
+ * Contains the styles for the call to action. This includes the layout, 
+ * positioning, alignment, etc. The call to action component is designed to 
+ * draw the user's attention and typically includes a headline, supporting 
+ * text, and a primary button.
+ *
+ * CTA's may appear in multiple locations, such as the homepage, inner pages, 
+ * or at the end of content sections. Styles are built to be flexible and 
+ * reusable, with support for responsive behaviour and variations in 
+ * presentation.
+ */
+.cta {
+  max-width: var(--cta-max-width);
+  padding: var(--cta-p);
+  margin-inline: auto;
+  border-radius: var(--cta-radius);
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+  text-align: var(--cta-text-align);
+}
+.cta-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cta-content .heading {
+  margin-bottom: var(--cta-content-spacing);
+  font-size: var(--cta-heading-fs);
+  line-height: 1;
+}
+.cta-btn {
+  margin-top: var(--cta-content-spacing);
+}
+@media (min-width: 80em) {
+  .cta-content {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .cta-text {
+    max-width: 540px;
+    margin-right: auto;
+  }
+  .cta-btn {
+    margin-top: 0;
+  }
+}
+
+/**
+ * PAGES
+ *
+ * Page specific styles act as the entry point for scoped styles that apply 
+ * only to individual page templates or views. These styles are not intended to 
+ * be reused across the UI and should remain tightly coupled to their 
+ * respective pages for clarity and maintainability.
+ *
+ * Included partials:
+ * - _home.scss : Custom styles for the homepage layout
+ *
+ * This file should be imported last in the main stylesheet, after base, 
+ * layout, and component styles, to ensure page-level overrides take priority 
+ * where needed.
+ */
+/**
+ * HOME
+ *
+ * Contains styles that are specific to the homepage layout.
+ *
+ * These styles should remain scoped to the homepage and should not be reused 
+ * globally. For shared components, use the 'components' directory instead.
+ */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--home-profile-gap);
+  padding-block: var(--home-profile-py);
+  color: var(--home-profile-clr);
+  text-align: var(--home-profile-text-align);
+}
+.profile img {
+  max-width: var(--home-profile-img-max-w);
+  margin-bottom: var(--home-profile-mb);
+  margin-inline: auto;
+}
+.profile-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--home-profile-content-gap);
+}
+.profile-content .heading {
+  color: var(--home-profile-content-heading-clr);
+  font-size: var(--home-profile-content-heading-fs);
+  line-height: var(--home-profile-content-heading-leading);
+}
+@media (min-width: 48em) {
+  .profile {
+    flex-direction: row;
+  }
+  .profile img {
+    transform: var(--home-profile-img-translate);
+  }
+  .profile .btn {
+    margin-right: auto;
+  }
+}
+@media (min-width: 80em) {
+  .profile {
+    max-width: 69.375rem;
+  }
+  .profile img {
+    margin-right: auto;
+  }
+}
+
+.work {
+  padding-bottom: var(--work-pb);
+  text-align: var(--work-text-align);
+}
+.work .heading {
+  font-size: var(--work-heading-fs);
+}
