@@ -80,6 +80,14 @@
 
     /* Footer */
     --site-footer-my: 2.5rem;
+
+    --site-attribution-max-w: 22rem;
+    --site-attribution-mb: 2rem;
+    --site-attribution-clr: var(--clr-neutral-500);
+    --site-attribution-fs: 0.800rem;
+    --site-attribution-text-align: center;
+    --site-attribution-link-border-b: 1px dotted var(--clr-neutral-500);
+    --site-attribution-link-opacity-hover: 0.5;
     
     /********** COMPONENTS
 
@@ -181,7 +189,6 @@
         --site-header-branding-img-size: 4rem;
 
         --site-footer-my: 3.5rem;
-
 
         --hero-max-w: 43.125rem; /* 690px */
         --hero-m: 4rem auto;

@@ -33,3 +33,21 @@
 .site-footer .container {
     margin-block: var(--site-footer-my);
 }
+
+.attribution {
+    max-width: var(--site-attribution-max-w);
+    margin-inline: auto;
+    margin-bottom: var(--site-attribution-mb);
+    color: var(--site-attribution-clr);
+    font-size: var(--site-attribution-fs);
+    text-align: var(--site-attribution-text-align);
+
+    a {
+        border-bottom: var(--site-attribution-link-border-b);
+
+        @include mixin.hover-focus {
+            opacity: var(--site-attribution-link-opacity-hover);
+            outline: none;
+        }
+    }
+}
