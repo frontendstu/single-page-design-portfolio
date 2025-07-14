@@ -1,0 +1,35 @@
+/**
+ * HEADER/FOOTER
+ *
+ * Defines the base styles for the site header and footer. Due to the repeating 
+ * layout and styles, a single header/footer partial was created to save 
+ * on bloating the Sass folder.
+ *
+ * Contains the base styles for both the header and footer, along with the site 
+ * attribution (author, copyright, etc). The header and footer was positioned 
+ * using flexbox. The site branding image was sized using the size mixin.
+ */
+
+@use '../abstracts/mixins' as mixin;
+
+.site-header .container,
+.site-footer .container {
+    @include mixin.flex($direction: row, $justify: space-between);
+
+    max-width: var(--site-header-max-w);
+
+    img {
+        @include mixin.size(
+            $width: var(--site-header-branding-img-size),
+            $height: auto
+        );
+    }
+}
+
+.site-header .container {
+    margin-top: var(--site-header-mt);
+}
+
+.site-footer .container {
+    margin-block: var(--site-footer-my);
+}

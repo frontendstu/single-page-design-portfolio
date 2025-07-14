@@ -6,9 +6,10 @@
  * major page regions without applying component-specific design.
  *
  * Included partials:
- * - _header.scss       : Global site header layout and visual styles 
- * - _footer.scss       : Global site footer layout and visual styles
- * - _container.scss    : Wrapper and container utilities for consistent spacing
+ * - _header-footer.scss    : Global site header and footer layout and visual 
+ *                              styles 
+ * - _container.scss        : Wrapper and container utilities for consistent 
+ *                              spacing
  *
  * Layouts styles should focus on structure and region-specific design not 
  * reusable components. They are intended to support and frame the content 
@@ -18,4 +19,4 @@
  */
 
 @forward 'container';
-@forward 'header';
+@forward 'header-footer';
