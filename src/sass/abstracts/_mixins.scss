@@ -177,3 +177,35 @@
         @if $border-radius != null { border-radius: $border-radius; }
     }
 }
+
+// SIZE
+//
+// A utility mixin for applying element dimensions.
+// Accepts width, height, max-width, and max-height as optional parameters
+//
+// Useage:
+// @include size(100%, auto, 60rem);
+//
+// Parameters
+// - $width         :   Sets `width`        (optional)
+// - $height        :   Sets `height`       (optional)
+// - $max-width     :   Sets `max-width`    (optional)
+// - $max-height    :   Sets `max-height`   (optional)
+
+@mixin size($width: null, $height: null, $max-width: null, $max-height: null) {
+    @if $width != null {
+        width: $width;
+    }
+
+    @if $height != null {
+        height: $height;
+    }
+
+    @if $max-width != null {
+        max-width: $max-width;
+    }
+
+    @if $max-height != null {
+        max-height: $max-height;
+    }
+}
