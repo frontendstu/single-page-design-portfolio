@@ -9,7 +9,6 @@ lerna-debug.log*
 
 # Build output, dependencies and local environment files
 node_modules/
-public/
 dist
 dist-ssr
 *.local
